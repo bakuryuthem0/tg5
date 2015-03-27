@@ -3,8 +3,33 @@ body,html
 	padding: 0px;
 	margin: 0px;
 	font-size: 73.33%;
+	color:#333;
 	background: rgb(50,50,50);
 	font-family: 'Roboto', 'sans-serif' !important;
+}
+.footer
+{
+	width: 100%;
+  	margin: 0px;
+  	min-height: 100px;
+  	display: table;
+}
+.footer > div 
+{
+	display: table-cell;
+	vertical-align: middle;
+}
+.footer > div > p
+{
+	text-align: left;
+}
+#about,
+#contact,
+#news,
+#project,
+#redes
+{
+	min-height: 100%;
 }
 #about
 {
@@ -31,10 +56,7 @@ body,html
 }
 #contact
 {
-	background-image:url('../images/fondo60-01.png');
-	background-attachment: fixed;
-	background-size: 100% 100%;
-	background-repeat: no-repeat;
+	background-color: #C7C7C6;
 }
 #container
 {
@@ -88,10 +110,6 @@ body,html
 }
 #news
 {
-	background-image: url(../images/fondo30-01.png) !important;
-	background-attachment: fixed;
-	background-size: 100% 100%;
-	background-repeat: no-repeat;
 	padding-bottom: 4em;
 }
 #pagina_aparte
@@ -100,10 +118,7 @@ body,html
 }
 #project
 {
-	background-image: url(../images/fondo10-01.png) !important;
-	background-attachment: fixed;
-	background-size: 100% 100%;
-	background-repeat: no-repeat;
+	background-color: #21A4B1;
 	padding-bottom: 4em;
 }
 #pub_exterior
@@ -112,10 +127,10 @@ body,html
 }
 #redes
 {
-	float: none;
-	margin: 0 auto;
-	display: block;
-	text-align: center;
+	background-image:url('../images/redes.jpg');
+	background-attachment: fixed;
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
 }
 #top
 {
@@ -157,16 +172,6 @@ body,html
 {
 	min-height: 100px;
 }
-.caricatura
-{
-	background: url(../images/caricatura-02.png)!important;
-	position: fixed;
-	height: 266px;
-	width: 150px;
-	left: 88%;
-	top:40%;
-	opacity: 0;
-}
 .clear
 {
 	background: #2f2f2f;
@@ -182,15 +187,32 @@ body,html
 {
 	width: 90%;
 }
-
-.contenedorBot
+.contAboutUs
 {
-	color: white;
+	  max-width: 1020px;
+	  margin: 0 auto;
+	  display: block;
+	  float: none;
+}
+.contAboutUs > div > p
+{
+	text-align: justify;
+}
+.contenedorTextoAgencia
+{
+	float: none;
+	display: inline-block;
+	vertical-align: top;
+	text-align: justify;
 }
 .contenedorGrande
 {
 	width: 100%;
 	margin: 0px;
+}
+.contSlider
+{
+	width: 32.33333%;
 }
 .cont_titulo_about img
 {
@@ -249,15 +271,6 @@ body,html
 	color:white;
 
 	text-align: center;
-}
-.footer
-{
-	width: 100%;
-	margin: 0px;
-	background: url('../images/fondo de pie de pagina-01.png');
-	background-size: 100% 100%;
-	background-repeat: no-repeat;
-	background-attachment: fixed;
 }
 .formInput
 {
@@ -398,14 +411,17 @@ body,html
 	
 	margin-bottom: 1em;
 }
-
+.margen
+{
+	margin-top: 5em;
+	margin-bottom: 5em;
+}
 @media(max-width: 1160px) and (min-width: 610px){
 	.sliderPrinc
 	{
 		  position: absolute !important;
 		  float: none !important;
 		  display: inline-block;
-		  vertical-align: middle;
 		  top: 50% !important;
 		  -webkit-transform: translateY(-50%) !important;
 		     -moz-transform: translateY(-50%) !important;
@@ -602,29 +618,32 @@ body,html
 	margin:0 0 3px !important;
 	opacity: 0;
 }
-.redes_sociales
-{
-	display: inline-block;
-	width: 90px;
-	height: 80px;
-	margin-left: 1em;
-}
-.refran
-{
-	width: 50%;
-	display: block;
-	margin: 0 auto;
-	margin-top: 5em;
-	margin-bottom: 5em;
-}
-.refran img
-{
-	width: 100%;
-}
+
 .responseAlert
 {
 	display: none;
 	opacity: 0;
+}
+
+.red
+{
+	font-size: 4em;
+}
+.redes
+{
+	min-height: 300px;
+	background: green;
+	left: 80%;
+	-webkit-transform: translateX(-80%);
+	text-align: center;
+}
+.redMarco
+{
+	display: inline-block;
+	padding: 0.5em;
+	border-radius: 8px;
+	background: white;
+	color: green;
 }
 .row
 {
@@ -699,6 +718,14 @@ body,html
 	width: 80%;
 	display: block;
 	margin: 0 auto;
+}
+.slick-prev
+{
+	left: 0;
+}
+.slick-next
+{
+	right: 0;
 }
 .sliderPrinc
 {

@@ -1,6 +1,5 @@
 @extends('main')
 @section('content')
-<div class="caricatura"></div>
 <div class="row contenedorGrande banner">
 	<img src="{{ URL::to('images/banner.gif') }}">
 </div>
@@ -12,7 +11,7 @@
 				<h1>Quienes somos</h1>
 				<h3>Nuestro equipo</h3>
 			</div>
-			<div class="col-xs-12">
+			<div class="col-xs-12" style="margin-top: 5em;">
 				<div class="col-xs-6 contAbout1">
 					<div class="about1 ab2">
 						<h3><strong class="tgvnzla">Tecnographic Venezuela</strong></h3>
@@ -58,24 +57,30 @@
 		</div>
 	</div>
 	<div id="about" class="row contenedorGrande">
-		<div class="container">
-			<div class="col-xs-12">
-				<h1 style="text-align:left;">AGENCIA DE DISEÑO GRÁFICO PUBLICITARIO Y SISTEMAS ADMINISTRATIVOS</h1>
-				<p class="textoPromedio"><strong>Tecnographic de Venezuela, C.A.</strong>, es su agencia de Diseño Grafico y de Sistemas Administrativos, en Maracay, Venezuela; contamos con personal altamente calificado en el ramo de la publicidad digital, diseño gráfico y diseño de herramientas online como páginas web, tiendas virtuales, campañas de email, redes sociales y sistemas administrativos. Estamos ubicados en la Ciudad de Maracay, además prestamos todos nuestros servicios de diseño gráfico en el resto de Venezuela.</p>
-				<p class="textoPromedio">
-				Entre nuestros servicios como agencia publicitaria y consultora podemos citar: Asesoría en estrategias de mercadeo, Diseño de Imagen Corporativa, Diseño Gráfico, Diseño de Logotipos en Maracay, Diseño de Páginas Web  en Maracay, Diseño de Afiches en Maracay, Diseño de Banners, Diseño de Perfiles para redes sociales, Diseño  de Empaques de Productos,  Diseño de Tarjetas de Presentación, Diseño de Señalética, Fotografía de Productos, Fotografía de Modelos, Fotografía de Espacio</p>
-			</div>
-			<div class="col-xs-6 contSlider sliderPrinc">
-				<div class="mySlide">
-					<div><img src="{{URL::to('images/slides/slider1-01.png')}}"></div>
-					<div><img src="{{URL::to('images/slides/slider2-01.png')}}"></div>
-					<div><img src="{{URL::to('images/slides/slider3-01.png')}}"></div>
+		<div class="container margen">
+			<div class="contAboutUs">
+				<div class="col-xs-8 titulos">
+					<h1 style="text-align:left;">AGENCIA DE DISEÑO GRÁFICO PUBLICITARIO Y SISTEMAS ADMINISTRATIVOS</h1>
 				</div>
-			</div>
-			<div class="col-xs-12 contenedorBot textoServicios">
-				<p class="textoPromedio"><strong>Tecnographic de Venezuela, C.A.</strong>, es su agencia de Diseño Grafico y de Sistemas Administrativos, en Maracay, Venezuela; contamos con personal altamente calificado en el ramo de la publicidad digital, diseño gráfico y diseño de herramientas online como páginas web, tiendas virtuales, campañas de email, redes sociales y sistemas administrativos. Estamos ubicados en la Ciudad de Maracay, además prestamos todos nuestros servicios de diseño gráfico en el resto de Venezuela.</p>
-				<p class="textoPromedio">
-				Entre nuestros servicios como agencia publicitaria y consultora podemos citar: Asesoría en estrategias de mercadeo, Diseño de Imagen Corporativa, Diseño Gráfico, Diseño de Logotipos en Maracay, Diseño de Páginas Web  en Maracay, Diseño de Afiches en Maracay, Diseño de Banners, Diseño de Perfiles para redes sociales, Diseño  de Empaques de Productos,  Diseño de Tarjetas de Presentación, Diseño de Señalética, Fotografía de Productos, Fotografía de Modelos, Fotografía de Espacio</p>
+				<div class="col-xs-12">
+					<p class="textoPromedio"><strong>Tecnographic de Venezuela, C.A.</strong>, es su agencia de Diseño Grafico y de Sistemas Administrativos, en Maracay, Venezuela; contamos con personal altamente calificado en el ramo de la publicidad digital, diseño gráfico y diseño de herramientas online como páginas web, tiendas virtuales, campañas de email, redes sociales y sistemas administrativos. Estamos ubicados en la Ciudad de Maracay, además prestamos todos nuestros servicios de diseño gráfico en el resto de Venezuela.</p>
+					<p class="textoPromedio">
+					Entre nuestros servicios como agencia publicitaria y consultora podemos citar: Asesoría en estrategias de mercadeo, Diseño de Imagen Corporativa, Diseño Gráfico, Diseño de Logotipos en Maracay, Diseño de Páginas Web  en Maracay, Diseño de Afiches en Maracay, Diseño de Banners, Diseño de Perfiles para redes sociales, Diseño  de Empaques de Productos,  Diseño de Tarjetas de Presentación, Diseño de Señalética, Fotografía de Productos, Fotografía de Modelos, Fotografía de Espacio</p>
+				</div>
+				<div class="col-xs-12" style="padding-top: 5em;">
+					<div class="col-xs-4 contSlider sliderPrinc" style="padding: 0;">
+						<div class="mySlide">
+							<div><img src="{{URL::to('images/slides/slider1-01.png')}}"></div>
+							<div><img src="{{URL::to('images/slides/slider2-01.png')}}"></div>
+							<div><img src="{{URL::to('images/slides/slider3-01.png')}}"></div>
+						</div>
+					</div>
+					<div class="col-xs-8 contenedorTextoAgencia textoServicios">
+						<p class="textoPromedio"><strong>Tecnographic de Venezuela, C.A.</strong>, es su agencia de Diseño Grafico y de Sistemas Administrativos, en Maracay, Venezuela; contamos con personal altamente calificado en el ramo de la publicidad digital, diseño gráfico y diseño de herramientas online como páginas web, tiendas virtuales, campañas de email, redes sociales y sistemas administrativos. Estamos ubicados en la Ciudad de Maracay, además prestamos todos nuestros servicios de diseño gráfico en el resto de Venezuela.</p>
+						<p class="textoPromedio">
+						Entre nuestros servicios como agencia publicitaria y consultora podemos citar: Asesoría en estrategias de mercadeo, Diseño de Imagen Corporativa, Diseño Gráfico, Diseño de Logotipos en Maracay, Diseño de Páginas Web  en Maracay, Diseño de Afiches en Maracay, Diseño de Banners, Diseño de Perfiles para redes sociales, Diseño  de Empaques de Productos,  Diseño de Tarjetas de Presentación, Diseño de Señalética, Fotografía de Productos, Fotografía de Modelos, Fotografía de Espacio</p>
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>
@@ -173,6 +178,26 @@
 		</div>
 	</div>
 </div>
+<div id="redes" class="row contenedorGrande">
+	<div class="col-xs-4 redes">
+		<div class="container">
+			<div class="col-xs-12">
+				<div class="redMarco">
+					<i class="fa fa-facebook-official red"></i>
+				</div>
+				<div class="redMarco">
+					<i class="fa fa-twitter red"></i>
+				</div>
+				<div class="redMarco">
+					<i class="fa fa-google-plus red"></i>
+				</div>
+				<div class="redMarco">
+					<i class="fa fa-instagram red"></i>
+				</div>
+			</div>
+		</div>
+	</div>		
+</div>
 <div id="contact" style="padding-bottom: 5em;">
 	<div class="container">
 		<div class="col-xs-12">
@@ -184,14 +209,14 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-xs-12" style="margin-bottom:5em;">
-						<legend class="textoBlanco textoGrande textMid">
+						<legend class="textoGrande textMid">
 							Agradecemos nos contacte para facilitarle un presupuesto 
 	relacionado con su proyecto o para cualquier otro comentario.
 						</legend>
 				</div>
 				<div class="col-xs-6 cont contactusBot" style="margin-bottom:5em;">
 					<div class="col-xs-12">
-						<ul class="textMid ulContact textoPromedio textoBlanco" style="padding-left: 0px;">
+						<ul class="textMid ulContact textoPromedio " style="padding-left: 0px;">
 							<li><i class="fa fa-envelope"></i><strong> tecnographicvenezuela@gmail.com</strong></li>
 							<li><i class="fa fa-skype"></i><strong> Tecnographic Venezuela</strong></li>
 							<li><i class="fa fa-comments"></i><strong> Tambien puede contactar con nosotros mediante nuestro chat en el horario comprendido entre 8:15 am y 5:00 pm de lunes a viernes</strong></li>
@@ -206,7 +231,7 @@
 				</div>
 
 				<div class="col-xs-6 forma contactusBot">
-					<legend class="textoBlanco">Por favor llene el siguiente formulario si desea que nuestros agentes se pongan en contacto con usted.</legend>
+					<legend class="">Por favor llene el siguiente formulario si desea que nuestros agentes se pongan en contacto con usted.</legend>
 						<div class="alert alert-success responseAlert">
 							
 						</div>

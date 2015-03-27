@@ -15,7 +15,7 @@
 		<link rel="icon" type="image/png" href="{{URL::to('images/favicon-01.png')}}" />
 		{{ HTML::style('css/bootstrap.min.css') }}
 		{{ HTML::style('css/bootstrap-theme.min.css')}}
-		{{ HTML::style('http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css') }}
+		{{ HTML::style('http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css') }}
 		{{ HTML::style('css/slicknav.css') }}
 		{{ HTML::style('http://fonts.googleapis.com/css?family=Roboto:400,700,300') }}
 		{{ HTML::style('js/slick-master/slick/slick.css') }}
@@ -86,80 +86,16 @@
 		</div>
 		<div class="bloque"></div>
 		@yield('content')
-		<div class="row footer">
-			<footer id="contactenos">
-		    <div class="line" id="container">
-				<div class="container">
-					<div class="container" >
-						<div id="col-xs-12">
-							<div id="cont_contacto" class="col-xs-4 contenedorBot">
-								<h2 class="info_titulo"><a href="contacto.php" class="link_inf">Contacto</a></h2>
-								<p class="contac textoPromedio">
-								<i class="fa fa-crosshairs"></i> <strong> tecnographic</strong>, agencia de 
-								diseño & sistemas en maracay, 
-								venezuela.
-								</p>
-								<p class="contac textoPromedio">
-								<i class="fa fa-mobile"></i> +58 (0424) 355.71.53<br>
-								<i class="fa fa-phone"></i> +58 (0243) 431.26.99 <br></p>
-
-								<p class="contac textoPromedio"><i class="fa fa-thumb-tack"></i> maracay edo-aragua, venezuela</p>
-
-								<p class="contac textoPromedio"><i class="fa fa-envelope"></i> tecnographicvenezuela@gmail.com</p>
-							
-							</div>
-							<div id="cont_servicios"  class="col-xs-5 contenedorBot">
-								<h2 class="info_titulo"><a href="sev.php" class="link_inf">Servicios</a></h2>
-								<ul class="info" id="serv_info">
-									<li class="textoPromedio"><p><a href="{{ URL::to('servicios/1') }}"><strong>Diseño web</strong></a></p></li>
-
-									<li class="textoPromedio"><p><a href="{{ URL::to('servicios/2') }}"><strong>Imagen corporativa</strong></a></p></li>
-
-									<li class="textoPromedio"><p><a href="{{ URL::to('servicios/3') }}"><strong>Medios impresos</strong></a></p></li>
-
-									<li class="textoPromedio"><p><a href="{{ URL::to('servicios/4') }}"><strong>Publicidad exterior</strong></a></p></li>
-
-									<li class="textoPromedio"><p><a href="{{ URL::to('servicios/5') }}"><strong>Fotografía</strong></a></p></li>
-
-									<li class="textoPromedio"><p><a href="{{ URL::to('servicios/6') }}"><strong>Desarrollo de sistemas 
-									   adminitrativo</strong></a></p></li>
-									<li class="textoPromedio"><p><a href="{{ asset('documents/catalogo.pdf') }}"><strong>Descargue nuestro catalogo</strong></a></p></li>
-								</ul>
-							</div>
-							<div id="cont_nosotros"  class="col-xs-3 contenedorBot">
-								<h2 class="info_titulo"><a href="quien.php" class="link_inf">Nosotros</a></h2>
-								<ul class="info" id="nosotros">
-									<li class="textoPromedio"><a href="{{ $href[1] }}" class="page-scroll" style="vertical-align:top;display:block;"><p>Servicios</p></a></li>
-									<li class="textoPromedio"><a href="{{ $href[2] }}" class="page-scroll" style="vertical-align:top;display:block;"><p>Quienes somos</p></a></li>
-									<li class="textoPromedio"><a href="{{ $href[3] }}" class="page-scroll" style="vertical-align:top;display:block;"><p>Portafolio</p></a></li>
-
-									<li class="textoPromedio"><a href="{{ $href[4] }}" class="page-scroll" style="vertical-align:top;display:block;"><p>Contacto</p></a></li>
-								</ul>
-							</div>
-						</div>						
-					</div>
-					<div id="redes" class="col-xs-6">
-						<a target="_blank" href="https://www.facebook.com/pages/Tecnographic-Venezuela/1610712109156293?ref=hl">
-							<div id="face" class="redes_sociales">
-							</div>
-						</a>
-						<a target="_blank" href="https://twitter.com/tecnographicVE">
-							<div id="twit" class="redes_sociales">
-							</div>
-						</a>
-						<a target="_blank" href="https://plus.google.com/109211038019318006025/posts">
-							<div id="gplu" class="redes_sociales">
-							</div>
-						</a>
-					</div>
-					<div class="textoPromedio cpy col-xs-12">
-						<p>Copyright &copy 2014 Tecnographic Venezuela. All Rights Reserved.</p>
-						<p>Rif: J-40488576-5</p>
-					</div>
-				</div>
-			</div>	
-		</footer>
-	</div>
+		<div class="row">
+			<footer class="col-xs-12 footer">
+		    	<div class="col-xs-6">
+		    		<p class="textoBlanco textoPromedio">Rif: J-40488576-5</p>
+		    	</div>
+		    	<div class="col-xs-6">
+		    		<p class="textoBlanco textoPromedio">Copyright <i class="fa fa-copyright"></i> 2014. Tecnographic Venezuela. Todos los derechos reservados</p>
+		    	</div>
+			</footer>
+		</div>
 	</body>
 	{{ HTML::script('js/jquery.min.js')}}
 	{{ HTML::script('js/bootstrap.min.js') }}
