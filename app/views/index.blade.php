@@ -7,8 +7,8 @@
 <div id="about" class="row contenedorGrande">
 	
 	<div class="container">
-		<div class="row about" style="margin-top:5em;">
-			<div class="col-xs-6 medio">
+		<div class="row about" style="margin-top:5em;margin-bottom:5em;">
+			<div class="col-xs-6 titulos medio">
 				<h1>Quienes somos</h1>
 				<h3>Nuestro equipo</h3>
 			</div>

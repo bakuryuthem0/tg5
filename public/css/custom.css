@@ -139,7 +139,7 @@ body,html
 .about1
 {
 	text-align: justify;
-	color: white;
+	color: #333;
 }
 .active
 {
@@ -747,6 +747,7 @@ body,html
 {
 	text-align: right;
 }
+
 .tgvnzla
 {
 	font-size:1.5em;
@@ -757,6 +758,15 @@ body,html
 .titPort a 
 {
 	color: white;
+}
+.titulos
+{
+	text-align: center;
+}
+
+.titulos > h1
+{
+	font-size: 5em;
 }
 .twitter-widget-0
 {
