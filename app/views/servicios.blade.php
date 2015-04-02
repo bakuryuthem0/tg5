@@ -1,8 +1,7 @@
-@extends('main')
+@extends('service')
 @section('content')
 <div class="contLoading">
 </div>
-<div id="about"></div>
 <div id="pagina_aparte" class="{{ $servicio }} row">
 	<div class="container">
 		<div class="row contText">
@@ -20,7 +19,7 @@
 					</div>
 				</aside>
 
-				<div id="cont_trio" class="col-xs-4 contMitad sliderPrinc">
+				<div id="cont_trio" class="col-xs-6 contMitad sliderPrinc">
 					
 					<aside id="mini_slider" class="mySlide">
 						@if($id == 1)
@@ -46,7 +45,7 @@
 		<div class="row contText">
 			<div class="col-xs-12">
 				<div class="col-xs-6 contCatalogo" style="margin-top:2em;">
-					<a href="" class="catalogo"></a><button class="btn btn-primary">Catalogo</button>
+					<a href="" class="catalogo"></a><button class="btn btn-primary btn-catalogo">Catalogo</button>
 				</div>
 				<div class="col-xs-12" style="margin-top:2em;">
 					<div class="fb-like" data-href="{{ $refer }}" data-layout="standard" data-action="like" data-show-faces="true" data-share="true"></div>
@@ -66,7 +65,9 @@
 			<ul class="ulContact" style="padding-left: 0px;">
 				<li class="btn clear" style="margin-bottom:1em;"><a class="selected ini" href="{{ URL::to('servicios/'.$id) }}" style="color:white;text-decoration:none;">Inicio</a></li>
 				@foreach($servicios as $clave => $servicio)
-					<li class="btn clear" style="margin-bottom:1em;"><a class="serv_mini" href="#." id="{{ $servicio->title }}" data-option-value="{{ $servicio->id }}">{{ ucwords(str_replace('_',' ',$servicio->nombre)) }}</a></li>
+					<li class="btn clear" style="margin-bottom:1em;">
+						<a class="serv_mini" href="#." id="{{ $servicio->title }}" data-option-value="{{ $servicio->id }}">{{ ucwords(str_replace('_',' ',$servicio->nombre)) }}</a>
+					</li>
 				@endforeach
 			</ul>
 		</div><!-- //filter_block -->	
@@ -77,7 +78,6 @@
 
 @section('postscript')
 <script type="text/javascript">
-			$(document).ready(function(){
 				$('.mySlide').slick({
 					adaptiveHeight: false,
 					autoplay		: true,
@@ -102,7 +102,6 @@
 				  autoplaySpeed : 5000
 				});
 				*/
-			});
 			
 
 			

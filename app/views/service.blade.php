@@ -40,6 +40,7 @@
 		})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 		ga('create', 'UA-57229555-1', 'auto');
 		ga('send', 'pageview');
+		*/
 		</script>
 		<!--Start of Zopim Live Chat Script-->
 		<script type="text/javascript">
@@ -51,14 +52,8 @@
 		</script>
 		<!--End of Zopim Live Chat Script-->
 	</head>
-	<body>
-		<section id="cd-intro">
-			<div id="cd-intro-tagline">
-				
-			</div> 
-		</section>
-		 
-		<div class="cd-secondary-nav">
+	<body class="bodyservice">
+		<div class="cd-secondary-nav servicenav">
 			<h2 class="tgvnzlaTitulo">Tecnographic Venezuela</h2>
 			<a href="#0" class="cd-secondary-nav-trigger">Menu<span></span></a> <!-- button visible on small devices -->
 			<nav>
@@ -91,9 +86,6 @@
 	{{ HTML::script('js/bootstrap.min.js') }}
 	{{ HTML::script('js/scroll/jquery.nicescroll.min.js') }}
 	{{ HTML::script('js/custom.js') }}
-	<!--{{ HTML::script('js/cambio_let.js') }}
-	{{ HTML::script('js/cambio_img.js') }}
-	{{ HTML::script('js/custom.js') }}-->
 	{{ HTML::script('js/slick-master/slick/slick.min.js') }}
 	{{ HTML::script("js/jquery.easing.min.js") }}
     {{ HTML::script("js/scrolling-nav.js") }}

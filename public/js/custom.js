@@ -1,55 +1,11 @@
+
 jQuery(document).ready(function($) {
 	if($(window).width()>991)
 	{
 		$("html").niceScroll();
 	}
 });
-$('.letra').hover(function()
-{
-	var id = $(this).prop('id').toLowerCase();
-	var esto = $('#'+id);
-	esto.animate({
-		opacity: '1'
-	},500)
-},
-function()
-{
-	var id = $(this).prop('id').toLowerCase();
-	var esto = $('#'+id);
-	esto.animate({
-		opacity: '0'
-	},500)
-})
-jQuery(document).ready(function($) {
-	$(window).scroll(function(){
-		var pos = $('#about').position();
 
-		if (pos.top >= (parseInt($(window).scrollTop())+parseInt(95))) {
-			$('.caricatura').stop().animate({
-				'opacity': 0,
-				},
-				250);
-			
-		}else
-		{
-			$('.caricatura').stop().animate({
-				'opacity': 1,
-				},
-				250);
-		}
-	})
-});
-jQuery(document).ready(function($) {
-	$('.servicio').hover(function() {
-		$(this).children('img').stop().animate({
-			'opacity': 0},
-			250);
-	}, function() {
-		$(this).children('img').stop().animate({
-			'opacity': 1},
-			250);
-	});
-});
 $('.send').click(function(event) {
 	var name = $('.name').val(),
 	email    = $('.email').val(),
@@ -133,18 +89,13 @@ $('.send').click(function(event) {
 	
 
 });
-$(document).ready(function(){
-    
-	$('.serv_mini').click(function()
-	{
-		$(this).unbind('click')
-        $('.selected').removeClass('selected');
-        $(this).addClass('selected');
-		var nombre = $(this).attr('id');
-		var id = $(this).attr('data-option-value');
-		dataPost = {'nombre':nombre,'id':id};
-		
-		$.ajax({
+$('.serv_mini').click(function(event) {
+    $('.selected').removeClass('selected');
+    $(this).addClass('selected');
+	var nombre = $(this).attr('id');
+	var id = $(this).attr('data-option-value');
+	dataPost = {'nombre':nombre,'id':id};
+	$.ajax({
                 url:'../buscar',
                 type:'POST',
                 data: dataPost,
@@ -183,13 +134,8 @@ $(document).ready(function(){
                     {
                         $('.img1').css({'display':'none'});
                         $('.img2').css({'display':'none'});
-                        $('meta[name=description]').attr('content',response.meta)
-						$('#pagina_aparte').animate({'opacity':0.5},100,function(){
-								$(this).css('background-image',"url('../images/"+response.fondo+"')")
-							}).animate({'opacity':1},500,function(){
-								$(this).css('background-image',"url('../images/"+response.fondo+"')")
-							});
-						
+                        $('meta[name=description]').attr('content',response.meta);
+
                     	$('.h_titulo').animate({'opacity':0},500,function(){
                             $(this).html(response.nombre)
                             $(this).animate({'opacity':1},500)
@@ -198,10 +144,7 @@ $(document).ready(function(){
                     		$('.text_description').html(response.desc)
                     		$('.text_description').animate({'opacity':1},500);
                         })                    
-                        /*$('#img_titulo').animate({'opacity':0},500,function(){
-                        	$(this).remove();
-                        	$('#titulo_servicio').append('<h3 class="h_titulo">'+response.nombre+'</h3>');
-                        })*/             
+                                  
                         $('.img1').addClass('nada').addClass('activo');
                         $('.img1').css({'display':'block','width':'100%'}).attr('src','../images/pc/'+response.img1+'.png');
                         if (response.img2 != "") {
@@ -212,19 +155,11 @@ $(document).ready(function(){
                             'display': 'block',
                             'opacity':0
                         })
-                    }else{
-						alert('llego mal')
                     }
-                },
-                error:function()
-                {
-                    alert('error feo')
                 }
 
             });
-	})
-})
-
+});
 jQuery(document).ready(function($) {
 	
 	$('.picsGall').click(function(event) {
@@ -234,5 +169,77 @@ jQuery(document).ready(function($) {
 		
 	});
 });
-/*
-*/
+jQuery(document).ready(function($) {
+
+	$('.servicio').mouseenter(function() {
+		var id = $(this).attr('id');
+		$('#project').stop().animate({'opacity':0},500,function(){ 
+			if (id == 'diseno_web') {
+				$(this).css('background-color', '#0DB900');
+			}else if(id == 'imagen_corporativa')
+			{
+				$(this).css('background-color', '#FF8129');
+			}else if(id == 'medios_impresos')
+			{
+				$(this).css('background-color', '#F30000');
+			}else if(id == 'pub_exterior'){
+				$(this).css('background-color', '#21A4B1');
+			}else if(id == 'fotografia')
+			{
+				$(this).css('background-color', '#B4C203');
+			}else if(id == 'sistema_administrativo')
+			{
+				$(this).css('background-color', '#2200E4');
+			}
+			$(this).stop().animate({'opacity':1},500)	
+		});
+	});
+});
+jQuery(document).ready(function($) {
+	if ($(window).width() < 991) {
+			$('body').css('padding-top', '70px');
+			$('.logo').css('width', '0px');
+			$('#cd-intro').addClass('collapse');
+			$('#about').addClass('collapse');
+			$('#contact').addClass('collapse');
+			$('#news').addClass('collapse');
+			$('#project').addClass('collapse');
+			$('#agency').addClass('collapse');
+			$('#redes').addClass('collapse');
+	}else
+	{
+		$('body').css('padding-top', '0px');
+		$('.collapse').css({'height':'auto'}).removeClass('collapse');
+		$('.logo').css('width', 'auto');
+	}
+	$(window).resize(function(event) {
+		if ($(window).width() < 991) {
+			$('body').css('padding-top', '70px');
+			$('.logo').css('width', '0px');
+			$('#cd-intro').addClass('collapse');
+			$('#about').addClass('collapse');
+			$('#contact').addClass('collapse');
+			$('#news').addClass('collapse');
+			$('#project').addClass('collapse');
+			$('#agency').addClass('collapse');
+			$('#redes').addClass('collapse');
+		}else
+		{
+			$('body').css('padding-top', '0px');
+			$('.collapse').css({'height':'auto'}).removeClass('collapse');
+			$('.logo').css('width', 'auto');
+
+		}
+	});
+	
+});
+jQuery(document).ready(function($) {
+	$('.collapse-navigation').click(function(event) {
+		var id = $(this).attr('data-target');
+
+		if ($('.in').length > 0) {
+			$('.in:not('+id+')').animate({'height':0},500,function(){$('.in:not('+id+')').removeClass('in') })
+		}
+	});
+});
+	
