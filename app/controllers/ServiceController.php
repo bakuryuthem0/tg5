@@ -5,6 +5,7 @@ class ServiceController extends BaseController {
 
 	public function getService($id)
 	{
+		$all = Servicios::get();
 		$serv = Servicios::where('id','=',$id)->get();
 		$servicio = ContServ::where('id_serv','=',$id)->get();
 		$title = 'Servicios | Tecnographic Venezuela';
@@ -25,7 +26,17 @@ class ServiceController extends BaseController {
 		->with('servicio','servicio_'.$id)
 		->with('meta',$meta)
 		->with('refer',$self)
-		->with('id',$id);
+		->with('id',$id)
+		->with('all',$all);
+	}
+	public function postMobilService()
+	{
+		if (Request::ajax()) {
+			$id = Input::get('id');
+			$serv = Servicios::where('id','=',$id)->get();
+			$servicio = ContServ::where('id_serv','=',$id)->get();
+			return Response::json(array('serv' => $serv,'contserv' => $servicio));
+		}
 	}
 	public function postService()
 	{

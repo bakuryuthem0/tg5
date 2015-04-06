@@ -91,9 +91,7 @@
 	{{ HTML::script('js/bootstrap.min.js') }}
 	{{ HTML::script('js/scroll/jquery.nicescroll.min.js') }}
 	{{ HTML::script('js/custom.js') }}
-	<!--{{ HTML::script('js/cambio_let.js') }}
-	{{ HTML::script('js/cambio_img.js') }}
-	{{ HTML::script('js/custom.js') }}-->
+	
 	{{ HTML::script('js/slick-master/slick/slick.min.js') }}
 	{{ HTML::script("js/jquery.easing.min.js") }}
     {{ HTML::script("js/scrolling-nav.js") }}

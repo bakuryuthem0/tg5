@@ -116,7 +116,7 @@
 					
 			</div>
 		</div>
-	</div>
+</div>
 <div id="collapse-news" class="collapse-navigation" data-toggle="collapse" data-target="#news">
 	<div class="col-xs-3"></div>
 	<div class="col-xs-9">

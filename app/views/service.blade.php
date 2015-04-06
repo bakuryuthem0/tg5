@@ -40,7 +40,6 @@
 		})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 		ga('create', 'UA-57229555-1', 'auto');
 		ga('send', 'pageview');
-		*/
 		</script>
 		<!--Start of Zopim Live Chat Script-->
 		<script type="text/javascript">
@@ -55,8 +54,8 @@
 	<body class="bodyservice">
 		<div class="cd-secondary-nav servicenav">
 			<h2 class="tgvnzlaTitulo">Tecnographic Venezuela</h2>
-			<a href="#0" class="cd-secondary-nav-trigger">Menu<span></span></a> <!-- button visible on small devices -->
-			<nav>
+			<a href="#0" class="cd-secondary-nav-trigger trigger-service"><i class="fa fa-bars navicon"></i></a> <!-- button visible on small devices -->
+			<nav class="noMovil">
 				<ul>
 					<li><img src="{{ asset('images/logo-01.png') }}" class="logo"></li>
 					<li class="active"><a href="{{ $href[0] }}" class="page-scroll"><h4><strong>INICIO</strong></h4><h5 class="subtitulo"><i>todo comienza aqui</i></h5></a></li>
@@ -64,6 +63,68 @@
 					<li><a href="{{ $href[2] }}" class="page-scroll"><h4><strong>QUIENES SOMOS</strong></h4><h5 class="subtitulo"><i>nuestro equipo</i></h5></a></li>
 					<li><a href="{{ $href[3] }}" class="page-scroll"><h4><strong>PORTAFOLIO</strong></h4><h5 class="subtitulo"><i>nuestros clientes</i></h5></a></li>
 					<li><a href="{{ $href[4] }}" class="page-scroll"><h4><strong>CONTACTO</strong></h4><h5 class="subtitulo"><i>solicte presupuesto</i></h5></a></li>
+					<!-- other items here -->
+				</ul>
+			</nav>
+			<nav class="Movil">
+				<ul>
+					<li class="active">
+						<a href="{{ $href[0] }}" class="page-scroll">
+							<div id="collapse-about" class="collapse-navigation">
+								<div class="col-xs-3">
+									<img src="{{ asset('images/diseno_web.png') }}">
+								</div>	
+								<div class="col-xs-9">
+									<div class="table-cell">
+										<h3>INICIO</h3><h5>todo comienza aqui</h5>
+
+									</div>
+								</div>
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="{{ $href[1] }}" class="page-scroll">
+							<div id="collapse-project" class="collapse-navigation">
+								<div class="col-xs-3">
+									<img src="{{ asset('images/medios_impresos.png') }}">
+								</div>
+								<div class="col-xs-9">
+									<div class="table-cell">
+										<h3>QUIENES SOMOS</h3><h5>Nuestro equipo</h5>
+
+									</div>
+								</div>
+							</div>
+						</a>
+					</li>
+					
+					<li><a href="{{ $href[3] }}" class="page-scroll">
+						<div id="collapse-news" class="collapse-navigation">
+							<div class="col-xs-3">
+								<img src="{{ asset('images/imagen_corporativa.png') }}">
+							</div>
+							<div class="col-xs-9">
+								<div class="table-cell">
+									<h3>PORTAFOLIO</h3><h5>Nuestros clientes</h5>
+								</div>
+							</div>
+						</div>
+						</a>
+					</li>
+					<li><a href="{{ $href[4] }}" class="page-scroll">
+						<div id="collapse-contact" class="collapse-navigation" data-toggle="collapse" data-target="#contact">
+							<div class="col-xs-3">
+								<img src="{{ asset('images/sistema_administrativo.png') }}">
+							</div>
+							<div class="col-xs-9">
+								<div class="table-cell">
+									<h3>CONTACTO</h3><h5>Solicite presupuesto</h5>
+								</div>
+							</div>
+						</div>
+						</a>
+					</li>
 					<!-- other items here -->
 				</ul>
 			</nav>
@@ -82,10 +143,10 @@
 		</div>
 	</body>
 	{{ HTML::script('js/jquery.min.js')}}
-	{{ HTML::script('js/main.js') }}
 	{{ HTML::script('js/bootstrap.min.js') }}
-	{{ HTML::script('js/scroll/jquery.nicescroll.min.js') }}
 	{{ HTML::script('js/custom.js') }}
+	{{ HTML::script('js/main.js') }}
+	{{ HTML::script('js/scroll/jquery.nicescroll.min.js') }}
 	{{ HTML::script('js/slick-master/slick/slick.min.js') }}
 	{{ HTML::script("js/jquery.easing.min.js") }}
     {{ HTML::script("js/scrolling-nav.js") }}

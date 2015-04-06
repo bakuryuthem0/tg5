@@ -13,5 +13,6 @@
 
 Route::get('/', 'HomeController@getIndex');
 Route::post('enviar-correo','ContactController@postContact');
+Route::post('servicios/movil','ServiceController@postMobilService');
 Route::get('servicios/{id}','ServiceController@getService');
 Route::post('buscar','ServiceController@postService');
