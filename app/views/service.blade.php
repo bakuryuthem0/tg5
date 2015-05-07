@@ -19,6 +19,9 @@
 		{{ HTML::style('css/slicknav.css') }}
 		{{ HTML::style('http://fonts.googleapis.com/css?family=Roboto:400,700,300') }}
 		{{ HTML::style('js/slick-master/slick/slick.css') }}
+		{{ HTML::style('css/material.min.css') }}
+		{{ HTML::style('css/ripples.min.css') }}
+		{{ HTML::style('css/roboto.min.css') }}
 		{{ HTML::style('css/custom.css') }}
 		{{ HTML::style('css/reset.css') }}
 		{{ HTML::style('css/style.css') }}
@@ -70,7 +73,7 @@
 				<ul>
 					<li class="active">
 						<a href="{{ $href[0] }}" class="page-scroll">
-							<div id="collapse-about" class="collapse-navigation">
+							<div id="collapse-about" class="collapse-navigation ">
 								<div class="col-xs-3">
 									<img src="{{ asset('images/diseno_web.png') }}">
 								</div>	
@@ -143,13 +146,20 @@
 		</div>
 	</body>
 	{{ HTML::script('js/jquery.min.js')}}
-	{{ HTML::script('js/bootstrap.min.js') }}
-	{{ HTML::script('js/custom.js') }}
-	{{ HTML::script('js/main.js') }}
 	{{ HTML::script('js/scroll/jquery.nicescroll.min.js') }}
 	{{ HTML::script('js/slick-master/slick/slick.min.js') }}
+	{{ HTML::script('js/bootstrap.min.js') }}
 	{{ HTML::script("js/jquery.easing.min.js") }}
     {{ HTML::script("js/scrolling-nav.js") }}
+	{{ HTML::script('js/material.min.js') }}
+	{{ HTML::script('js/ripples.min.js') }}
+	{{ HTML::script('js/custom.js') }}
+
+	<script>
+    	jQuery(document).ready(function($) {
+    	$.material.init();
+    	});
+    </script>
 
     @yield('postscript')
   

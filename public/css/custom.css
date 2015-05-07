@@ -59,6 +59,7 @@ body,html
 {
 	height: 25%;
 }
+
 #cont_servicios
 {
 	padding-left: 10%;
@@ -163,6 +164,11 @@ body,html
 {
 	min-height: 100px;
 }
+.btn-flat
+{
+	margin-top: 0;
+	margin-bottom: 0;
+}
 .clear
 {
 	background: rgb(50,50,50);
@@ -173,6 +179,14 @@ body,html
 {
 	background: #23A7B5;
 	color: white;
+}
+.collapse-navigation img
+{
+	height: 81px;
+}
+.collapse-navigation .table-cell
+{
+	color: black;
 }
 .container
 {

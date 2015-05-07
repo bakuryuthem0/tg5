@@ -16,7 +16,7 @@ class ServiceController extends BaseController {
 		$news = explode('"', link_to('servicios/../#news'));
 		$contact = explode('"', link_to('../#contact'));
 		$href = array($home[1] ,$project[1],$about[1],$news[1],$contact[1]);
-
+		$aux = "holahola";
 		$self = Request::server('REQUEST_URI');
 		return View::make('servicios')
 		->with('servicios',$servicio)
@@ -27,7 +27,8 @@ class ServiceController extends BaseController {
 		->with('meta',$meta)
 		->with('refer',$self)
 		->with('id',$id)
-		->with('all',$all);
+		->with('all',$all)
+		->with('aux',$aux);
 	}
 	public function postMobilService()
 	{

@@ -3,10 +3,11 @@
 
 <div id="collapse-about" class="collapse-navigation" data-toggle="collapse" data-target="#about">
 	<div class="col-xs-3"></div>	
-	<div class="col-xs-9">
+	<div class="col-xs-9 btn btn-flat">
 		<div class="table-cell">
 			<h3>QUIENES SOMOS</h3><h5>Nuestro equipo</h5>
 		</div>
+		<div class="ripple-wrapper"></div>
 	</div>
 </div>
 <div class="row contenedorGrande">
@@ -46,10 +47,11 @@
 </div>
 <div id="collapse-project" class="collapse-navigation" data-toggle="collapse" data-target="#project">
 	<div class="col-xs-3"></div>
-	<div class="col-xs-9">
+	<div class="col-xs-9 btn btn-flat" data-color="">
 		<div class="table-cell">
 			<h3>SERVICIOS</h3><h5>que hacemos</h5>
 		</div>
+		<div class="ripple-wrapper"></div>
 	</div>
 </div>
 <div class="row contenedorGrande">
@@ -119,10 +121,11 @@
 </div>
 <div id="collapse-news" class="collapse-navigation" data-toggle="collapse" data-target="#news">
 	<div class="col-xs-3"></div>
-	<div class="col-xs-9">
+	<div class="col-xs-9 btn btn-flat" data-color="">
 		<div class="table-cell">
 			<h3>PORTAFOLIO</h3><h5>Nuestros clientes</h5>
 		</div>
+		<div class="ripple-wrapper"></div>
 	</div>
 </div>
 <div class="row contenedorGrande">
@@ -230,10 +233,11 @@
 </div>
 <div id="collapse-contact" class="collapse-navigation" data-toggle="collapse" data-target="#contact">
 	<div class="col-xs-3"></div>
-	<div class="col-xs-9">
+	<div class="col-xs-9 btn btn-flat" data-color="">
 		<div class="table-cell">
 			<h3>CONTACTO</h3><h5>Solicite presupuesto</h5>
 		</div>
+		<div class="ripple-wrapper"></div>
 	</div>
 </div>
 <div class="row contenedorGrande">

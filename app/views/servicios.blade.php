@@ -4,15 +4,16 @@
 	<img src="{{ asset('images/loader.gif')}}" class="loadingInBlack">
 </div>
 @foreach($all as $a)
-	<div id="collapse-{{ str_replace('_','-',$a->image) }}" class="collapse-navigation-service" data-este-servicio="{{ str_replace('_','-',$a->image) }}" data-esto-id="{{ $a->id }}">
+	<div id="collapse-{{ str_replace('_','-',$a->image) }}" class="collapse-navigation-service btn btn-flat" data-este-servicio="{{ str_replace('_','-',$a->image) }}" data-esto-id="{{ $a->id }}">
 		<div class="col-xs-3">
 			<img src="{{ asset('images/'.$a->image.'.png') }}">
 		</div>	
-		<div class="col-xs-9">
+		<div class="col-xs-9 ">
 			<div class="table-cell">
 				<h3>{{ strtoupper($a->nombre) }}</h3><i class="fa fa-caret-down caretfa"></i>
 			</div>
 		</div>
+		<div class="ripple-wrapper"></div>
 	</div>
 	<div id="{{str_replace('_','-',$a->image)}}"></div>
 @endforeach
@@ -97,6 +98,7 @@
 @stop
 
 @section('postscript')
+
 <script type="text/javascript">
 				$('.mySlide').slick({
 					adaptiveHeight: false,
