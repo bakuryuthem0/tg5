@@ -12,6 +12,26 @@ jQuery(document).ready(function($) {
 	});
 });
 
+$(document).ready(function() {
+	function cambiarNav() {
+		var offset = $('.cd-secondary-nav').offset();
+		if (offset.top <= $(window).scrollTop()) {
+			$('.cd-secondary-nav').addClass('nav-active');
+			$('.logo').addClass('logo-active');
+			$('.subtitulo').addClass('subtitulo-active');
+		}
+		if($('#about').offset().top >= $(window).scrollTop()){
+			$('.nav-active').removeClass('nav-active');
+			$('.logo-active').removeClass('logo-active');
+			$('.subtitulo-active').removeClass('subtitulo-active');
+		}
+	}	
+	cambiarNav();
+	$(window).scroll(function(event) {
+		cambiarNav();
+	});
+});
+
 $('.send').click(function(event) {
 	var name = $('.name').val(),
 	email    = $('.email').val(),
@@ -433,6 +453,28 @@ jQuery(document).ready(function($) {
 	});
 });
 	
+$(document).ready(function() {
+	function cambiarFondo()
+	{
+		var origin = ['0% 0% 0px','0% 100% 0px','100% 0% 0px','100% 100% 0px'];
+		var option = [4,1,3,0,4,3,2,1,2,0]; 
+		var rand   = Math.ceil(Math.random()*10);
+
+		if ($('.front').next().length > 0) 
+		{
+			$('.front').removeClass('front').addClass('back').next('div').removeClass('back').addClass('front');
+		} 
+		else
+		{
+			$('.front').removeClass('front').addClass('back')
+			$('.carousel').children('div:first-child').addClass('front').removeClass('back');
+		}
+		$('.front').css({
+			'transform-origin' : origin[option[rand]]
+		});
+	}
+	setInterval(cambiarFondo,10000);
+});
 
 jQuery(document).ready(function($) {
 	$('.collapse-navigation-service').click(function(event) {
@@ -453,7 +495,6 @@ jQuery(document).ready(function($) {
 jQuery(document).ready(function($){
 	var secondaryNav = $('.cd-secondary-nav'),
 		secondaryNavTopPosition = secondaryNav.offset().top,
-		taglineOffesetTop = $('#cd-intro-tagline').offset().top + $('#cd-intro-tagline').height() + parseInt($('#cd-intro-tagline').css('paddingTop').replace('px', '')),
 		contentSections = $('.cd-section');
 	
 	$(window).on('scroll', function(){
@@ -543,3 +584,14 @@ jQuery(document).ready(function($){
 		if($(event.target).is('.cd-primary-nav')) $(this).children('ul').toggleClass('is-visible');
 	});
 });
+
+$(document).ready(function(){
+    $('.slider').slick({
+        dots: true,
+ 	 	infinite: true,
+  	 	speed: 500,
+  	 	fade: true,
+  	 	cssEase: 'linear',
+    });
+});
+

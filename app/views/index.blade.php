@@ -1,4 +1,4 @@
-@extends('main')
+@extends('layouts.main')
 @section('content')
 
 <div id="collapse-about" class="collapse-navigation" data-toggle="collapse" data-target="#about">
@@ -212,6 +212,13 @@
 	</div>
 </div>
 <div id="redes" class="row contenedorGrande">
+	<div class="carousel">
+		@foreach($slidesInf as $s)
+		<div class="front">
+			<img src="{{ asset('images/slides-top/'.$s->image) }}">
+		</div>
+		@endforeach
+	</div>
 	<div class="col-xs-4 redes">
 		<div class="container">
 			<div class="col-xs-12">
@@ -255,19 +262,18 @@
 		relacionado con su proyecto o para cualquier otro comentario.
 							</h3>
 					</div>
-					<div class="col-xs-6 cont contactusBot" style="margin-bottom:5em;">
+					<div class="col-xs-6 cont contactusBot" style="margin-bottom:5em;text-align:left">
 						<div class="col-xs-12">
 							<ul class="textMid ulContact textoPromedio " style="padding-left: 0px;">
-								<li><i class="fa fa-envelope"></i><strong> tecnographicvenezuela@gmail.com</strong></li>
-								<li><i class="fa fa-skype"></i><strong> Tecnographic Venezuela</strong></li>
-								<li><i class="fa fa-comments"></i><strong> Tambien puede contactar con nosotros mediante nuestro chat en el horario comprendido entre 8:15 am y 5:00 pm de lunes a viernes</strong></li>
+								<li><i class="fa fa-envelope"></i>tecnographicvenezuela@gmail.com</li>
+								<li><i class="fa fa-skype"></i>Tecnographic Venezuela</li>
+								<li><i class="fa fa-comments"></i>Tambien puede contactar con nosotros mediante <br> nuestro chat en el horario comprendido entre <br> 8:15 am y 5:00 pm de lunes a viernes</li>
 							</ul>
 						</div>
 						<div class="col-xs-12">
-						                        <a class="twitter-timeline"  href="https://twitter.com/tecnographicVE" data-widget-id="557266883888836608">Tweets por el @tecnographicVE.</a>
-		        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-		      
-		      
+						    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d125629.77593697135!2d-67.60541045!3d10.26718390000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e803c989377fe87%3A0xb5ff524dadae5b74!2sMaracay!5e0!3m2!1ses-419!2sve!4v1434394978178" width="500" height="275" frameborder="1" style="border:1"></iframe>
+		      				<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+ 
 						</div>
 					</div>
 
@@ -282,8 +288,8 @@
 							<textarea type="text" class="form-control formInput message" name="message" placeholder='Mensaje *' rows="7"></textarea>
 							<div class="cBtn col-xs-12" style="padding-left: 0px;">
 								<ul class="ulContact" style="padding-left: 0px;">
-									<li class="btn clear"><span>Borrar Campos</span></li>
-									<li class="btn send"><span>Enviar Mensaje</span></li>
+									<li class="btn clear btn-material-blue-grey-50"><span>Borrar Campos</span></li>
+									<li class="btn send btn-material-blue-grey-50"><span>Enviar Mensaje</span></li>
 								</ul>
 							</div>
 					</div>

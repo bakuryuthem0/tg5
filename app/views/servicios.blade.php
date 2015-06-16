@@ -1,4 +1,4 @@
-@extends('service')
+@extends('layouts.service')
 @section('content')
 <div class="contLoading">
 	<img src="{{ asset('images/loader.gif')}}" class="loadingInBlack">
