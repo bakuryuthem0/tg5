@@ -3,7 +3,6 @@
 @section('content')
 <div class="row">
 	<div class="container">
-		<form method="POST" action="administrador/activar-slides" id="formSlides">
 
 		<div class="col-xs-12">
 			<div class="alert responseDanger" style="text-align:center;">
@@ -14,6 +13,7 @@
 					<tr>
 						<th>Id</th>
 						<th>Vista previa</th>
+						<th>Posicion</th>
 						<th>Activar</th>
 						<th>Eliminar</th>
 					</tr>
@@ -23,6 +23,13 @@
 					<tr class="tr-slide-desc">
 						<td>{{ $s->id }}</td>
 						<td><img src="{{ asset('images/slides-top/'.$s->image) }}" style="max-width:300px;"></td>
+						<td>
+							@if($s->tipo == 1)
+								<h4>Slide Superior</h4>
+							@else
+								<h4>Slide Inferior</h4>
+							@endif
+						</td>
 						<td>
 							@if($s->active == 1)
 								<button class="btn btn-warning btn-xs refresh active" data-status="{{ $s->active }}" value="{{ $s->id }}">
@@ -41,7 +48,6 @@
 			</table>
 		</div>
 		
-		</form>
 
 	</div>
 </div>

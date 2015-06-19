@@ -10,32 +10,32 @@
 				<p class="bg-info textoPromedio" style="padding:0.5em;">Recuerde que las imagenes para el slider debe ser de almenos 1290*800 pixels</p>
 				<div class="bg-primary textoPromedio contOptionA" style="padding:0.5em;">
 					<div class="col-xs-12">
-						<a href="#" class="optionA" data-toggle="collapse" data-target=".single" style="color:white;">Unico slide </a>
-					</div>
-					<div class="col-xs-12">
-						<a href="#" class="optionA" data-toggle="collapse" data-target=".multiple" style="color:white;">Multiples slides</a>
+						<a href="#" class="optionA" data-toggle="collapse" data-target=".single" style="color:white;">Subir slide </a>
 					</div>
 					<div class="clearfix"></div>
 				</div>
 				<div class="single imagesSlidesOption textoPromedio collapse">
 					<form method="POST" action="{{ URL::to('administrador/nuevo-slide/procesar') }}" enctype="multipart/form-data">
-
 						<label>Slide:</label>
 						<input type="file" name="img">
+						<div class="radio radio-info">
+							<label>
+								<input type="radio" name="tipo" value="1" checked>
+								<span class="circle"></span><span class="check"></span>
+								Superior
+							</label>
+						</div>
+						<div class="radio radio-info">
+							<label>
+								<input type="radio" name="tipo" value="2">
+								<span class="circle"></span><span class="check"></span>
+								Inferior
+							</label>
+						</div>
 						<button class="btn btn-success btn-xs" style="margin-top:1em;">Enviar</button>
 					</form>
 				</div>
-				<div class="multiple imagesSlidesOption collapse">
-					<div id="dropzone">
-	                    <form action="{{ URL::to('administrador/nuevos-slides/procesar') }}" method="POST" class="dropzone textoPromedio" id="my-awesome-dropzone">
-	                        <div class="dz-message">
-	                            Arrastre o presione aquí para subir su imagen.
-	                        </div>
-	                    </form>
-	                    
-	                </div>
-	                <a href="{{ URL::to('administrador/editar-slides') }}" class="btn btn-success">Continuar</a>
-				</div>
+	
 				<div class="bg-primary textoPromedio volver" style="padding:0.5em;margin-top:1em;">
 					
 					<div class="col-xs-12">
