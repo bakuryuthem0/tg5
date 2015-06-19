@@ -16,12 +16,12 @@
 		{{ HTML::style('css/bootstrap.min.css') }}
 		{{ HTML::style('css/bootstrap-theme.min.css')}}
 		{{ HTML::style('http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css') }}
+		
 		{{ HTML::style('css/slicknav.css') }}
 		{{ HTML::style('http://fonts.googleapis.com/css?family=Roboto:400,700,300') }}
 		{{ HTML::style('js/slick-master/slick/slick.css') }}
-		{{ HTML::style('css/material.min.css') }}
-		{{ HTML::style('css/ripples.min.css') }}
-		{{ HTML::style('css/roboto.min.css') }}
+		{{ HTML::style('js/slick-master/slick/slick-theme.css') }}
+		
 		{{ HTML::style('css/custom.css') }}
 		{{ HTML::style('css/reset.css') }}
 		{{ HTML::style('css/style.css') }}
@@ -56,18 +56,18 @@
 	</head>
 	<body>
 		
-		<section id="cd-intro">
-			<div id="cd-intro-tagline">
-				
-			</div> 
-		</section>
+		<div class="slider">
+			@foreach ($slides as $image)
+				<div> <img src="images/slides-top/{{$image->image}}"> </div>
+			@endforeach
+		</div>
 		 
 		<div class="cd-secondary-nav">
 			<h2 class="tgvnzlaTitulo">Tecnographic Venezuela</h2>
 			<a href="#0" class="cd-secondary-nav-trigger">Menu<span></span></a> <!-- button visible on small devices -->
 			<nav>
 				<ul>
-					<li><img src="{{ asset('images/logo-01.png') }}" class="logo"></li>
+					<li><img src="{{ asset('images/logo.png') }}" class="logo"></li>
 					<li class="active"><a href="{{ $href[0] }}" class="page-scroll"><h4><strong>INICIO</strong></h4><h5 class="subtitulo"><i>todo comienza aqui</i></h5></a></li>
 					<li><a href="{{ $href[1] }}" class="page-scroll"><h4><strong>SERVICIOS</strong></h4><h5 class="subtitulo"><i>que hacemos</i></h5></a></li>
 					<li><a href="{{ $href[2] }}" class="page-scroll"><h4><strong>QUIENES SOMOS</strong></h4><h5 class="subtitulo"><i>nuestro equipo</i></h5></a></li>
@@ -96,8 +96,7 @@
 	{{ HTML::script('js/slick-master/slick/slick.min.js') }}
 	{{ HTML::script("js/jquery.easing.min.js") }}
     {{ HTML::script("js/scrolling-nav.js") }}
-	{{ HTML::script('js/material.min.js') }}
-	{{ HTML::script('js/ripples.min.js') }}
+	
 	{{ HTML::script('js/custom.js') }}	
     <script>
     	jQuery(document).ready(function($) {
