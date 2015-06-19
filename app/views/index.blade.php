@@ -66,15 +66,30 @@
 					@foreach($servicios as $clave => $servicio)
 					<a href="{{ URL::to('servicios/'.$servicio->id) }}">
 						<div class="servicio" id="{{ $servicio->image }}" >
-							<div class="col-xs-12" style="padding:0px;">
+							<div class="col-xs-12 tableServ" style="padding:0px;">
 								<div class="col-xs-4" style="padding:0px;">
+									@if($servicio->id == 1)
+										<i class="fa fa-5x my-fa fa-laptop"></i>
+									@elseif($servicio->id == 2)
+										<i class="fa fa-5x my-fa fa-pencil-square-o"></i>
+									@elseif($servicio->id == 3)
+										<i class="fa fa-5x my-fa fa-print"></i>
+									@elseif($servicio->id == 4)
+										<i class="fa fa-5x my-fa fa-file-image-o"></i>
+									@elseif($servicio->id == 5)
+										<i class="fa fa-5x my-fa fa-camera"></i>
+									@elseif($servicio->id == 6)
+										<i class="fa fa-5x my-fa fa-sitemap"></i>
+									@endif
 								</div>
 								<div class="col-xs-8" style="padding:0px;">
-									<p class="textoPromedio serviciosText" style="text-align:left;"><strong>{{ $servicio->nombre }}</strong></p>
+									<div class="col-xs-12" style="padding:0px;">
+										<p class="textoPromedio serviciosText" style="text-align:left;"><strong>{{ $servicio->nombre }}</strong></p>
+									</div>
+									<div class="col-xs-12" style="padding:0px;float:right;">
+										<p class="textoPromedio serviciosText" style="text-align:left;">{{ $servicio->servicios_desc }}</p>
+									</div>
 								</div>
-							</div>
-							<div class="col-xs-8" style="padding:0px;float:right;">
-								<p class="textoPromedio serviciosText" style="text-align:left;">{{ $servicio->servicios_desc }}</p>
 							</div>
 						</div>
 					</a>

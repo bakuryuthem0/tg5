@@ -24,9 +24,9 @@
     <body class="admin">
         <header class="admin">
             <nav class="navbar navbar-default" style="position:initial;">
-              <div class="container-fluid">
+              <div class="container-fluid container-fluid-admin">
                 <!-- Brand and toggle get grouped for better mobile display -->
-                <div class="col-xs-3">
+                <div class="col-xs-2">
                   <a href="{{ URL::to('administrador/inicio') }}"><img src="{{ asset('images/logo-01.png') }}" class="logo2"></a>
                 </div>
 
@@ -41,7 +41,7 @@
                
                <div class="navbar-collapse adminlayout" id="bs-example-navbar-collapse-1 col-xs-3">
                 @if(!Auth::check())
-                <h3 style="text-align:left;vertical-align:middle;">Bienvenido (a)<br>Al Centro De Administración De Tecnographic Venezuela C.A.</h3>
+                <h3 class="titulo-admin">Bienvenido (a)<br>Al Centro De Administración De Tecnographic Venezuela C.A.</h3>
                 @else
                   <ul class="nav navbar-nav">
                       <li class="dropdown myMenu">
@@ -59,7 +59,7 @@
                           Pagina
                         <span class="caret"></span></a>
                         <ul class="dropdown-menu multi-level" role="menu">
-                          <li class="dropdown-submenu">
+                          <li class="dropdown-submenu textoNegro">
                             <!--<a href="#" >
                               Slider
                             </a>-->
@@ -86,9 +86,9 @@
                               
                             </ul>
                           </li>
+                        <li class="textoPromedio "><a href="{{ URL::to('cerrar-sesion') }}" class="logout textoNegro">Cerrar sesión</a></li>
                         </ul>
                       </li> 
-                      <li class="textoPromedio"><a href="{{ URL::to('cerrar-sesion') }}" class="logout">Cerrar sesión</a></li>
                   </ul>
                 @endif
 

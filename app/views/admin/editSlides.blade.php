@@ -3,7 +3,6 @@
 @section('content')
 <div class="row">
 	<div class="container">
-		<form method="POST" action="administrador/activar-slides" id="formSlides">
 
 		<div class="col-xs-12">
 			<div class="alert responseDanger" style="text-align:center;">
@@ -49,7 +48,6 @@
 			</table>
 		</div>
 		
-		</form>
 
 	</div>
 </div>

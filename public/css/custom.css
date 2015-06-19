@@ -9,12 +9,23 @@ body,html
 }
 body.admin {
 	  background: rgb(255, 255, 255);
+	  padding-top: 5%;
+}
+header.admin{
+	opacity: 1;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+iframe
+{
+	width: 100%;
 }
 .footer
 {
 	width: 100%;
   	margin: 0px;
-  	min-height: 100px;
+  	height: 100px;
   	display: table;
 }
 .footer > div 
@@ -190,6 +201,10 @@ body.admin {
 {
 	width: 90%;
 }
+.contenedorUnico
+{
+	min-height: 500px;
+}
 .contAboutUs
 {
 	  max-width: 1020px;
@@ -218,6 +233,10 @@ body.admin {
 	display: inline-block;
 	vertical-align: top;
 	text-align: justify;
+}
+.container-fluid-admin
+{
+	box-shadow: 0px 0px 7px -3px black;
 }
 .contenedorGrande
 {
@@ -455,7 +474,10 @@ body.admin {
 {
 	margin-bottom: 5em;
 }
-
+.my-fa
+{
+	color: white;
+}
 @media(max-width: 991px){
 
 	#about,
@@ -679,7 +701,11 @@ body.admin {
 	display: none;
 	opacity: 0;
 }
-
+.responseDanger
+{
+	display: none;
+	opacity: 0;
+}
 .red
 {
 	font-size: 4em;
@@ -813,10 +839,28 @@ body.admin {
 .subtitulo-active {
 	display: none;
 }
+.tableServ
+{
+	display: table;
+}
+.tableServ > div
+{
+	display: table-cell;
+	vertical-align: middle;
+	float: none;
+}
 .textoBlanco
 {
 	color: white;
 	text-align: center;
+}
+.navbar-default .navbar-nav > li > a,.navbar-default .navbar-nav > li > a:hover,.navbar-default .navbar-nav > li > a:focus
+{
+	color: #777;
+}
+.navbar .navbar-nav > .open > a, .navbar .navbar-nav > .open > a:hover, .navbar .navbar-nav > .open > a:focus
+{
+	color: black;
 }
 .textoPromedio
 {
@@ -867,6 +911,12 @@ body.admin {
 .titulos > h1
 {
 	font-size: 5em;
+}
+.titulo-admin
+{
+	text-align:left;
+	vertical-align:middle;
+	color: black;
 }
 .twitter-widget-0
 {
@@ -1282,6 +1332,8 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ebe8eb', end
 	position: absolute;
 	width: 100%;
 	z-index: 1;
+	overflow: hidden;
+	height: 100%;
 }
 .carousel > div
 {
@@ -1298,6 +1350,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ebe8eb', end
 	width: 100%;
 	height: auto;
 }
+
 .front {
 	-webkit-transform-origin: 0% 0%;
 	   -moz-transform-origin: 0% 0%;
