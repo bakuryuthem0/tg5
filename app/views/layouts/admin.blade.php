@@ -17,7 +17,6 @@
         {{ HTML::style('css/bootstrap.min.css') }}
         {{ HTML::style('css/bootstrap-theme.min.css') }}
         {{ HTML::script("js/vendor/modernizr-2.6.2.min.js") }}
-        {{ HTML::style('css/material.min.css') }}
         {{ HTML::style('css/custom.css') }}
         {{ HTML::style('//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css') }}
     </head>
@@ -44,15 +43,7 @@
                 <h3 class="titulo-admin">Bienvenido (a)<br>Al Centro De Administración De Tecnographic Venezuela C.A.</h3>
                 @else
                   <ul class="nav navbar-nav">
-                      <li class="dropdown myMenu">
-                        <a href="#" class="dropdown-toggle textoPromedio" data-toggle="dropdown" role="button" aria-expanded="false">
-                          <i class="fa fa-user"></i>
-                            Usuario
-                          <span class="caret"></span></a>
-                          <ul class="dropdown-menu multi-level" role="menu">
-                            <li><a href="{{ URL::to('administrador/crear-nuevo') }}">Nuevo administrador</a></li>
-                          </ul>
-                      </li>
+                     
                       <li class="dropdown myMenu">
                       <a href="#" class="dropdown-toggle textoPromedio" data-toggle="dropdown" role="button" aria-expanded="false">
                         <i class="fa fa-user"></i>
@@ -100,10 +91,7 @@
     @yield('content')
         {{ HTML::script('js/jquery-2.1.1.js') }}
         {{ HTML::script('js/bootstrap.min.js') }}
-        {{ HTML::script("js/plugins.js") }}
-        {{ HTML::script('js/material.min.js') }}
-        {{ HTML::script("js/main.js") }}
-        {{ HTML::script('js/custom.js') }}
+        {{ HTML::script('js/custom-admin.js') }}
         
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
         <script>

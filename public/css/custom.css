@@ -7,15 +7,21 @@ body,html
 	background: rgb(50,50,50);
 	font-family: 'Roboto', 'sans-serif' !important;
 }
+body.bodyservice
+{
+	background-image: url('../images/textura-01.jpg');
+	height: auto;
+}
 body.admin {
 	  background: rgb(255, 255, 255);
-	  padding-top: 5%;
+	  padding-top: 10%;
 }
 header.admin{
 	opacity: 1;
     position: fixed;
     top: 0;
     width: 100%;
+    background-color: white;
 }
 iframe
 {
@@ -27,6 +33,7 @@ iframe
   	margin: 0px;
   	height: 100px;
   	display: table;
+  	background: rgb(50,50,50);
 }
 .footer > div 
 {
@@ -178,6 +185,7 @@ iframe
 	margin-top: 0;
 	margin-bottom: 0;
 }
+
 .clear
 {
 	background: rgb(50,50,50);
@@ -200,6 +208,28 @@ iframe
 .container
 {
 	width: 90%;
+}
+.container-redes
+{
+	position: absolute;
+	top: 50%;
+	right: 1.3%;
+	max-width: 650px;
+	color: white;
+	text-align: center;
+	-webkit-transform: translateY(-50%);
+	   -moz-transform: translateY(-50%);
+	    -ms-transform: translateY(-50%);
+	     -o-transform: translateY(-50%);
+	        transform: translateY(-50%);
+}
+.container-redes > h2
+{
+	line-height: 2em;
+}
+.container-redes > .redMarco
+{
+	margin: 1em;
 }
 .contenedorUnico
 {
@@ -287,6 +317,7 @@ iframe
 }
 .contLoading
 {
+	top: 0;
 	position: fixed;
 	width: 100%;
 	height: 100%;
@@ -708,7 +739,7 @@ iframe
 }
 .red
 {
-	font-size: 4em;
+	font-size: 6em;
 }
 .redes
 {
@@ -721,7 +752,7 @@ iframe
 .redMarco
 {
 	display: inline-block;
-	padding: 0.5em;
+	padding: 1em;
 	border-radius: 8px;
 	background: white;
 	color: green;
@@ -922,6 +953,10 @@ iframe
 {
 	width: 100% !important;
 }
+.ulRedes
+{
+	list-style: none;
+}
 .ulContact
 {
 	list-style: none;
@@ -957,10 +992,9 @@ iframe
 	background: url(../images/banner.gif) no-repeat center center !important;
   	background-size: cover;
 }
-.servicenav
+.bodyservice > .service-nav
 {
-	background-color: rgb(50,50,50) !important;
-	position: fixed !important;
+	position: fixed;
 	width: 100%;
 	top: 0;
 }

@@ -234,24 +234,28 @@
 		</div>
 		@endforeach
 	</div>
-	<div class="col-xs-4 redes">
-		<div class="container">
-			<div class="col-xs-12">
-				<div class="redMarco">
-					<i class="fa fa-facebook-official red"></i>
-				</div>
-				<div class="redMarco">
-					<i class="fa fa-twitter red"></i>
-				</div>
-				<div class="redMarco">
-					<i class="fa fa-google-plus red"></i>
-				</div>
-				<div class="redMarco">
-					<i class="fa fa-instagram red"></i>
-				</div>
+	<div class="col-xs-12" style="padding:0px;">
+		<img src="{{ asset('images/redes.png') }}">
+		<div class="container-redes">
+			<h2>Tecnographic, agencia de diseño & desarrollo de paginas web en maracay, Venezuela.</h2>
+			<ul class="ulRedes">
+				<li><h2>+58 (0424) 355.71.53</h2></li>
+				<li><h2>+58 (0423) 431.26.99</h2></li>
+			</ul>
+			<div class="redMarco">
+				<i class="fa fa-facebook-official red"></i>
+			</div>
+			<div class="redMarco">
+				<i class="fa fa-twitter red"></i>
+			</div>
+			<div class="redMarco">
+				<i class="fa fa-google-plus red"></i>
+			</div>
+			<div class="redMarco">
+				<i class="fa fa-instagram red"></i>
 			</div>
 		</div>
-	</div>		
+	</div>
 </div>
 <div id="collapse-contact" class="collapse-navigation" data-toggle="collapse" data-target="#contact">
 	<div class="col-xs-3"></div>
@@ -277,9 +281,9 @@
 		relacionado con su proyecto o para cualquier otro comentario.
 							</h3>
 					</div>
-					<div class="col-xs-6 cont contactusBot" style="margin-bottom:5em;text-align:left">
+					<div class="col-xs-6 cont contactusBot" style="margin-bottom:5em;">
 						<div class="col-xs-12">
-							<ul class="textMid ulContact textoPromedio " style="padding-left: 0px;">
+							<ul class="ulContact textoPromedio " style="padding-left: 0px;">
 								<li><i class="fa fa-envelope"></i>tecnographicvenezuela@gmail.com</li>
 								<li><i class="fa fa-skype"></i>Tecnographic Venezuela</li>
 								<li><i class="fa fa-comments"></i>Tambien puede contactar con nosotros mediante <br> nuestro chat en el horario comprendido entre <br> 8:15 am y 5:00 pm de lunes a viernes</li>
