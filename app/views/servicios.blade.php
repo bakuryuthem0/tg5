@@ -80,10 +80,10 @@
 			<div class="col-xs-12">
 				<div id="options" class="col-xs-12" style="text-align: center;margin-top:2em;">	
 					<ul class="ulContact" style="padding-left: 0px;">
-						<li class="btn clear btn-ini" style="margin-bottom:1em;"><a class="selected ini" href="{{ URL::to('servicios/'.$id) }}" style="color:white;text-decoration:none;">Inicio</a></li>
+						<li class="btn clear btn-ini btn-material-blue-grey-200" style="margin-bottom:1em;margin-top:0px;"><a class="selected ini" href="{{ URL::to('servicios/'.$id) }}" style="text-decoration:none;">Inicio</a></li>
 						@foreach($servicios as $clave => $servicio)
 							<a class="serv_mini" href="#." id="{{ $servicio->title }}" data-option-value="{{ $servicio->id }}">
-								<li class="btn clear btn-serv" style="margin-bottom:1em;">
+								<li class="btn clear btn-serv btn-material-blue-grey-200" style="margin-bottom:1em;">
 									{{ ucwords(str_replace('_',' ',$servicio->nombre)) }}
 								</li>
 							</a>

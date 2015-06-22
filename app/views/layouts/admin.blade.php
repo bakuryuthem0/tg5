@@ -26,7 +26,7 @@
               <div class="container-fluid container-fluid-admin">
                 <!-- Brand and toggle get grouped for better mobile display -->
                 <div class="col-xs-2">
-                  <a href="{{ URL::to('administrador/inicio') }}"><img src="{{ asset('images/logo-01.png') }}" class="logo2"></a>
+                  <a href="{{ URL::to('administrador/inicio') }}"><img src="{{ asset('images/logo-04.png') }}" class="logo2"></a>
                 </div>
 
                 <div class="navbar-header">
@@ -63,17 +63,6 @@
                                   Editar slides
                                 </a>
                               </li>
-                            <!--<ul class="dropdown-menu" role="menu">
-                              <li>
-                                <a href="{{ URL::to('administrador/nuevo-slide') }}">
-                                  Nuevo slide
-                                </a>
-                              </li>
-                              <li>
-                                <a href="{{ URL::to('administrador/editar-slides') }}">
-                                  Editar slides
-                                </a>
-                              </li>-->
                               
                             </ul>
                           </li>

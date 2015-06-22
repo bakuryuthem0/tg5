@@ -301,10 +301,15 @@
 							<div class="alert alert-success responseAlert">
 								
 							</div>
-							<input type="text" class="form-control formInput name " name="name" placeholder='Nombre *'/>
-							<input type="text" class="form-control formInput email" name="email" placeholder='Email *'/>
-							<input type="text" class="form-control formInput subject" name="subject" placeholder='Asunto'/>
-							<textarea type="text" class="form-control formInput message" name="message" placeholder='Mensaje *' rows="7"></textarea>
+							<fieldset>
+
+								<div class="form-group">
+									<input type="text" class="form-control formInput name " name="name" placeholder='Nombre *'/>
+									<input type="text" class="form-control formInput email" name="email" placeholder='Email *'/>
+									<input type="text" class="form-control formInput subject" name="subject" placeholder='Asunto'/>
+									<textarea type="text" class="form-control formInput message" name="message" placeholder='Mensaje *' rows="7"></textarea>
+								</div>
+							</fieldset>
 							<div class="cBtn col-xs-12" style="padding-left: 0px;">
 								<ul class="ulContact" style="padding-left: 0px;">
 									<li class="btn clear btn-material-blue-grey-50"><span>Borrar Campos</span></li>
@@ -329,24 +334,13 @@
 					autoplaySpeed : 5000,
 					fade: true,
 					cssEase: 'linear',
-					dots: true,
+					dots: false,
 					infinite: true,
 					speed: 300,
 					slidesToShow: 1,
 				});
 				
-				
-				/*$('.fade').slick({
-				  dots: true,
-				  infinite: true,
-				  speed: 500,
-				  fade: true,
-				  cssEase: 'linear',
-				  adaptiveHeight: true,
-				  autoplay		: true,
-				  autoplaySpeed : 5000
-				});
-				*/
+			
 			});
 			
 

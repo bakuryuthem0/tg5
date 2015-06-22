@@ -16,14 +16,17 @@
 		{{ HTML::style('css/bootstrap.min.css') }}
 		{{ HTML::style('css/bootstrap-theme.min.css')}}
 		{{ HTML::style('http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css') }}
+		{{ HTML::style('css/slicknav.css') }}
 		{{ HTML::style('http://fonts.googleapis.com/css?family=Roboto:400,700,300') }}
+		{{ HTML::style('js/slick-master/slick/slick.css') }}
+		{{ HTML::style('js/slick-master/slick/slick-theme.css') }}
 		{{ HTML::style('css/material.min.css') }}
+		{{ HTML::style('css/material-fullpalette.min.css') }}
 		{{ HTML::style('css/ripples.min.css') }}
 		{{ HTML::style('css/roboto.min.css') }}
 		{{ HTML::style('css/custom.css') }}
 		{{ HTML::style('css/reset.css') }}
 		{{ HTML::style('css/style.css') }}
-		{{ HTML::style('js/slick-master/slick/slick.css') }}
 		 <!-- Bootstrap Core CSS -->
 
 	    <!-- Custom CSS -->

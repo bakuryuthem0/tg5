@@ -1,8 +1,8 @@
 jQuery(document).ready(function($) {
 	function servClick(esto)
 	{
-		$('.selected').removeClass('selected');
-	    esto.addClass('selected');
+		$('.btn-info').removeClass('btn-info');
+	    esto.addClass('btn-info');
 
 		var nombre = esto.attr('id');
 		var id = esto.attr('data-option-value');
@@ -78,6 +78,7 @@ jQuery(document).ready(function($) {
     500,function(){
     	$("html").niceScroll({preservenativescrolling: true});
         $('.loadingInBlack').remove();
+        $('.contLoading').css({'display':'none'});
         $('.pagAparte').animate({
             'opacity': 1
         },500);

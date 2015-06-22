@@ -1,4 +1,12 @@
 jQuery(document).ready(function($) {
+	$('.logout').click(function(event) {
+		var x = confirm('¿Seguro desea salir?');
+		if (!x) {
+			event.preventDefault();
+		}
+	});	
+});
+jQuery(document).ready(function($) {
 	$('.refresh').click(function(event) {
 		var id = $(this).val(),status = $(this).data('status');
 		var boton = $(this);
@@ -76,7 +84,7 @@ jQuery(document).ready(function($) {
 				dataType: 'json',
 				data: {'id': id},
 				beforeSend:function() {
-					boton.after('<img src="../images/loading.gif" class="loading">');
+					boton.after('<img src="http://localhost/prueba/tg5/public/images/loading.gif" class="loading">');
 					boton.animate({
 						'opacity': 0},
 						250,function(){
@@ -91,6 +99,7 @@ jQuery(document).ready(function($) {
 						}
 				);
 				},success:function(response) {
+					window.location.reload();
 					$('.loading').animate({
 						'opacity': 0},
 						250,function(){
@@ -126,5 +135,11 @@ jQuery(document).ready(function($) {
 	});
 	$('#formSlides').submit(function(event) {
 		return false;
+	});
+});
+jQuery(document).ready(function($) {
+	$('.tipo').val($('.checkbox:checked').val())
+	$('.checkbox').change(function(event) {
+		$('.tipo').val($(this).val());
 	});
 });
