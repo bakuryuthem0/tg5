@@ -72,15 +72,11 @@ jQuery(document).ready(function($) {
 	                
 	            });
 	}
-	var servnomb = $('#pagina_aparte').data('servicio-nombre');
-	$('#pagina_aparte').appendTo('#'+servnomb)
-	$('#pagina_aparte').addClass('in')
-	 $('.contLoading').animate({
+	$('.contLoading').animate({
         'opacity':0
     },
     500,function(){
     	$("html").niceScroll({preservenativescrolling: true});
-        $(this).css({'display':'none'});
         $('.loadingInBlack').remove();
         $('.pagAparte').animate({
             'opacity': 1
@@ -192,7 +188,7 @@ jQuery(document).ready(function($) {
 	                        		'opacity':1
 	                        	});
 
-							$('#pagina_aparte').appendTo('#'+pos);	
+							$('#pagibna_aparte').appendTo('#'+pos);	
                         });
 						
 					},
@@ -220,7 +216,6 @@ jQuery(document).ready(function($) {
 		                        $('.serv_mini').click(function(event) {
 									servClick($(this))
 								});
-								$('#pagina_aparte').animate({'height':500},500,function(){ $(this).addClass('in').css({'min-height':500,'height':'auto'})});
 
 	                        });
 					}
