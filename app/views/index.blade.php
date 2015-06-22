@@ -284,9 +284,9 @@
 					<div class="col-xs-6 cont contactusBot" style="margin-bottom:5em;">
 						<div class="col-xs-12">
 							<ul class="ulContact textoPromedio " style="padding-left: 0px;">
-								<li><i class="fa fa-envelope"></i>tecnographicvenezuela@gmail.com</li>
-								<li><i class="fa fa-skype"></i>Tecnographic Venezuela</li>
-								<li><i class="fa fa-comments"></i>Tambien puede contactar con nosotros mediante <br> nuestro chat en el horario comprendido entre <br> 8:15 am y 5:00 pm de lunes a viernes</li>
+								<li><i class="fa fa-envelope"></i> tecnographicvenezuela@gmail.com</li>
+								<li><i class="fa fa-skype"></i> Tecnographic Venezuela</li>
+								<li><i class="fa fa-comments"></i> Tambien puede contactar con nosotros mediante <br> nuestro chat en el horario comprendido entre <br> 8:15 am y 5:00 pm de lunes a viernes</li>
 							</ul>
 						</div>
 						<div class="col-xs-12">
