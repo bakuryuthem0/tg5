@@ -27,7 +27,13 @@ Route::group(array('before' => 'auth'), function() {
 
 	Route::get('administrador/nuevo-slide','AdminController@getNewSlide');	
 	Route::post('administrador/nuevo-slide/procesar','AdminController@postNewSlide');
-	Route::get('administrador/editar-slides','AdminController@getEditSlides');
 
-	Route::get('logout','AdminController@getLogout');
+	Route::get('administrador/editar-slides','AdminController@getEditSlides');
+	Route::post('administrador/editar-slides/actualizar','AdminController@postEditSlides');
+	Route::post('administrador/editar-slides/eliminar','AdminController@postElimSlides');
+
+	Route::post('administrador/nuevos-slides/procesar','AdminController@post_upload');
+	Route::post('administrador/nuevos-slides/remover','AdminController@post_delete');
+
+	Route::get('cerrar-sesion','AdminController@logout');
 });

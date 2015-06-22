@@ -7,15 +7,34 @@ body,html
 	background: rgb(50,50,50);
 	font-family: 'Roboto', 'sans-serif' !important;
 }
+body.bodyservice
+{
+	background-image: url('../images/textura-01.jpg');
+	height: auto;
+}
 body.admin {
 	  background: rgb(255, 255, 255);
+	  padding-top: 10%;
+	  min-height: 800px;
+}
+header.admin{
+	opacity: 1;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 2;
+}
+iframe
+{
+	width: 100%;
 }
 .footer
 {
 	width: 100%;
   	margin: 0px;
-  	min-height: 100px;
+  	height: 100px;
   	display: table;
+  	background: rgb(50,50,50);
 }
 .footer > div 
 {
@@ -151,9 +170,7 @@ body.admin {
 	box-shadow: 0px 3px 9px rgba(0, 0, 0, 0.0) inset;
 	color: white !important;
 }
-.adminlayout {
-	margin-top: 2em;
-}
+
 .banner img
 {
 	width: 100%;
@@ -167,6 +184,7 @@ body.admin {
 	margin-top: 0;
 	margin-bottom: 0;
 }
+
 .clear
 {
 	background: rgb(50,50,50);
@@ -189,6 +207,32 @@ body.admin {
 .container
 {
 	width: 90%;
+}
+.container-redes
+{
+	position: absolute;
+	top: 50%;
+	right: 1.3%;
+	max-width: 37%;
+	color: white;
+	text-align: center;
+	-webkit-transform: translateY(-50%);
+	   -moz-transform: translateY(-50%);
+	    -ms-transform: translateY(-50%);
+	     -o-transform: translateY(-50%);
+	        transform: translateY(-50%);
+}
+.container-redes > h2
+{
+	line-height: 2em;
+}
+.container-redes > .redMarco
+{
+	margin: 1em;
+}
+.contenedorUnico
+{
+	min-height: 500px;
 }
 .contAboutUs
 {
@@ -218,6 +262,11 @@ body.admin {
 	display: inline-block;
 	vertical-align: top;
 	text-align: justify;
+}
+.container-fluid-admin
+{
+	box-shadow: 0 3px 5px -4px black;
+	background-color: white;
 }
 .contenedorGrande
 {
@@ -268,6 +317,7 @@ body.admin {
 }
 .contLoading
 {
+	top: 0;
 	position: fixed;
 	width: 100%;
 	height: 100%;
@@ -288,9 +338,15 @@ body.admin {
 
 	text-align: center;
 }
+#dropzone > .dropzone
+{
+	border-radius: 8px;
+	border: 2px dashed green;
+}
 .formInput
 {
 	margin-bottom: 1em;
+	border-bottom: 1px solid white;
 }
 .formInput::-webkit-input-placeholder { color: #333; }
 .formInput:-moz-placeholder { color: #333; opacity: 1; }
@@ -363,6 +419,7 @@ body.admin {
 .logo
 {
 	height: 100%;
+	width: auto;
 	  -webkit-transform: translateY(-15%);
 	     -moz-transform: translateY(-15%);
 	      -ms-transform: translateY(-15%);
@@ -455,7 +512,10 @@ body.admin {
 {
 	margin-bottom: 5em;
 }
-
+.my-fa
+{
+	color: white;
+}
 @media(max-width: 991px){
 
 	#about,
@@ -659,6 +719,7 @@ body.admin {
 	top: 0;
 	left: 0;
 }
+
 .padding
 {
 	padding-top: 5em;
@@ -679,10 +740,14 @@ body.admin {
 	display: none;
 	opacity: 0;
 }
-
+.responseDanger
+{
+	display: none;
+	opacity: 0;
+}
 .red
 {
-	font-size: 4em;
+	font-size: 6em;
 }
 .redes
 {
@@ -695,7 +760,7 @@ body.admin {
 .redMarco
 {
 	display: inline-block;
-	padding: 0.5em;
+	padding: 1em;
 	border-radius: 8px;
 	background: white;
 	color: green;
@@ -784,6 +849,7 @@ body.admin {
 {
 	display: block;
 	margin: 0 auto;
+	width: 100%;
 }
 .slick-prev
 {
@@ -795,7 +861,7 @@ body.admin {
 }
 .slider {
 	width: 100%;
-	height: 457px;
+	margin-top: 30px;
 }
 .sliderPrinc
 {
@@ -813,10 +879,28 @@ body.admin {
 .subtitulo-active {
 	display: none;
 }
+.tableServ
+{
+	display: table;
+}
+.tableServ > div
+{
+	display: table-cell;
+	vertical-align: middle;
+	float: none;
+}
 .textoBlanco
 {
 	color: white;
 	text-align: center;
+}
+.navbar-default .navbar-nav > li > a,.navbar-default .navbar-nav > li > a:hover,.navbar-default .navbar-nav > li > a:focus
+{
+	color: #777;
+}
+.navbar .navbar-nav > .open > a, .navbar .navbar-nav > .open > a:hover, .navbar .navbar-nav > .open > a:focus
+{
+	color: black;
 }
 .textoPromedio
 {
@@ -868,9 +952,23 @@ body.admin {
 {
 	font-size: 5em;
 }
+.titulo-admin
+{
+	text-align:left;
+	vertical-align:middle;
+	color: black;
+}
+.table-hover > tbody > tr > td
+{
+	vertical-align: middle;
+}
 .twitter-widget-0
 {
 	width: 100% !important;
+}
+.ulRedes
+{
+	list-style: none;
 }
 .ulContact
 {
@@ -892,6 +990,11 @@ body.admin {
 .btn-ini
 {
 	float: left;
+	background-color: #200;
+}
+.btn-ini > a
+{
+	color: rgba(0, 0, 0, 0.84);
 }
 .btn-serv
 {
@@ -907,10 +1010,9 @@ body.admin {
 	background: url(../images/banner.gif) no-repeat center center !important;
   	background-size: cover;
 }
-.servicenav
+.bodyservice > .service-nav
 {
-	background-color: rgb(50,50,50) !important;
-	position: fixed !important;
+	position: fixed;
 	width: 100%;
 	top: 0;
 }
@@ -1281,7 +1383,8 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ebe8eb', end
 {
 	position: absolute;
 	width: 100%;
-	z-index: 1;
+	z-index: -1;
+	height: 100%;
 }
 .carousel > div
 {
@@ -1298,6 +1401,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ebe8eb', end
 	width: 100%;
 	height: auto;
 }
+
 .front {
 	-webkit-transform-origin: 0% 0%;
 	   -moz-transform-origin: 0% 0%;

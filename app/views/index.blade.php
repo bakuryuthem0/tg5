@@ -66,15 +66,30 @@
 					@foreach($servicios as $clave => $servicio)
 					<a href="{{ URL::to('servicios/'.$servicio->id) }}">
 						<div class="servicio" id="{{ $servicio->image }}" >
-							<div class="col-xs-12" style="padding:0px;">
+							<div class="col-xs-12 tableServ" style="padding:0px;">
 								<div class="col-xs-4" style="padding:0px;">
+									@if($servicio->id == 1)
+										<i class="fa fa-5x my-fa fa-laptop"></i>
+									@elseif($servicio->id == 2)
+										<i class="fa fa-5x my-fa fa-pencil-square-o"></i>
+									@elseif($servicio->id == 3)
+										<i class="fa fa-5x my-fa fa-print"></i>
+									@elseif($servicio->id == 4)
+										<i class="fa fa-5x my-fa fa-file-image-o"></i>
+									@elseif($servicio->id == 5)
+										<i class="fa fa-5x my-fa fa-camera"></i>
+									@elseif($servicio->id == 6)
+										<i class="fa fa-5x my-fa fa-sitemap"></i>
+									@endif
 								</div>
 								<div class="col-xs-8" style="padding:0px;">
-									<p class="textoPromedio serviciosText" style="text-align:left;"><strong>{{ $servicio->nombre }}</strong></p>
+									<div class="col-xs-12" style="padding:0px;">
+										<p class="textoPromedio serviciosText" style="text-align:left;"><strong>{{ $servicio->nombre }}</strong></p>
+									</div>
+									<div class="col-xs-12" style="padding:0px;float:right;">
+										<p class="textoPromedio serviciosText" style="text-align:left;">{{ $servicio->servicios_desc }}</p>
+									</div>
 								</div>
-							</div>
-							<div class="col-xs-8" style="padding:0px;float:right;">
-								<p class="textoPromedio serviciosText" style="text-align:left;">{{ $servicio->servicios_desc }}</p>
 							</div>
 						</div>
 					</a>
@@ -219,24 +234,28 @@
 		</div>
 		@endforeach
 	</div>
-	<div class="col-xs-4 redes">
-		<div class="container">
-			<div class="col-xs-12">
-				<div class="redMarco">
-					<i class="fa fa-facebook-official red"></i>
-				</div>
-				<div class="redMarco">
-					<i class="fa fa-twitter red"></i>
-				</div>
-				<div class="redMarco">
-					<i class="fa fa-google-plus red"></i>
-				</div>
-				<div class="redMarco">
-					<i class="fa fa-instagram red"></i>
-				</div>
+	<div class="col-xs-12" style="padding:0px;">
+		<img src="{{ asset('images/redes.png') }}">
+		<div class="container-redes">
+			<h2>Tecnographic, agencia de diseño & desarrollo de paginas web en maracay, Venezuela.</h2>
+			<ul class="ulRedes">
+				<li><h2>+58 (0424) 355.71.53</h2></li>
+				<li><h2>+58 (0423) 431.26.99</h2></li>
+			</ul>
+			<div class="redMarco">
+				<i class="fa fa-facebook-official red"></i>
+			</div>
+			<div class="redMarco">
+				<i class="fa fa-twitter red"></i>
+			</div>
+			<div class="redMarco">
+				<i class="fa fa-google-plus red"></i>
+			</div>
+			<div class="redMarco">
+				<i class="fa fa-instagram red"></i>
 			</div>
 		</div>
-	</div>		
+	</div>
 </div>
 <div id="collapse-contact" class="collapse-navigation" data-toggle="collapse" data-target="#contact">
 	<div class="col-xs-3"></div>
@@ -262,12 +281,12 @@
 		relacionado con su proyecto o para cualquier otro comentario.
 							</h3>
 					</div>
-					<div class="col-xs-6 cont contactusBot" style="margin-bottom:5em;text-align:left">
+					<div class="col-xs-6 cont contactusBot" style="margin-bottom:5em;">
 						<div class="col-xs-12">
-							<ul class="textMid ulContact textoPromedio " style="padding-left: 0px;">
-								<li><i class="fa fa-envelope"></i>tecnographicvenezuela@gmail.com</li>
-								<li><i class="fa fa-skype"></i>Tecnographic Venezuela</li>
-								<li><i class="fa fa-comments"></i>Tambien puede contactar con nosotros mediante <br> nuestro chat en el horario comprendido entre <br> 8:15 am y 5:00 pm de lunes a viernes</li>
+							<ul class="ulContact textoPromedio " style="padding-left: 0px;">
+								<li><i class="fa fa-envelope"></i> tecnographicvenezuela@gmail.com</li>
+								<li><i class="fa fa-skype"></i> Tecnographic Venezuela</li>
+								<li><i class="fa fa-comments"></i> Tambien puede contactar con nosotros mediante <br> nuestro chat en el horario comprendido entre <br> 8:15 am y 5:00 pm de lunes a viernes</li>
 							</ul>
 						</div>
 						<div class="col-xs-12">
@@ -282,10 +301,15 @@
 							<div class="alert alert-success responseAlert">
 								
 							</div>
-							<input type="text" class="form-control formInput name " name="name" placeholder='Nombre *'/>
-							<input type="text" class="form-control formInput email" name="email" placeholder='Email *'/>
-							<input type="text" class="form-control formInput subject" name="subject" placeholder='Asunto'/>
-							<textarea type="text" class="form-control formInput message" name="message" placeholder='Mensaje *' rows="7"></textarea>
+							<fieldset>
+
+								<div class="form-group">
+									<input type="text" class="form-control formInput name " name="name" placeholder='Nombre *'/>
+									<input type="text" class="form-control formInput email" name="email" placeholder='Email *'/>
+									<input type="text" class="form-control formInput subject" name="subject" placeholder='Asunto'/>
+									<textarea type="text" class="form-control formInput message" name="message" placeholder='Mensaje *' rows="7"></textarea>
+								</div>
+							</fieldset>
 							<div class="cBtn col-xs-12" style="padding-left: 0px;">
 								<ul class="ulContact" style="padding-left: 0px;">
 									<li class="btn clear btn-material-blue-grey-50"><span>Borrar Campos</span></li>
@@ -310,24 +334,13 @@
 					autoplaySpeed : 5000,
 					fade: true,
 					cssEase: 'linear',
-					dots: true,
+					dots: false,
 					infinite: true,
 					speed: 300,
 					slidesToShow: 1,
 				});
 				
-				
-				/*$('.fade').slick({
-				  dots: true,
-				  infinite: true,
-				  speed: 500,
-				  fade: true,
-				  cssEase: 'linear',
-				  adaptiveHeight: true,
-				  autoplay		: true,
-				  autoplaySpeed : 5000
-				});
-				*/
+			
 			});
 			
 

@@ -58,7 +58,7 @@
 	</head>
 	<body>
 		
-		<div class="slider">
+		<div id="home" class="slider">
 			@foreach ($slidesSup as $image)
 				<div> <img src="images/slides-top/{{$image->image}}"> </div>
 			@endforeach
@@ -70,11 +70,11 @@
 			<nav>
 				<ul>
 					<li class="contLogo"><img src="{{ asset('images/logo.png') }}" class="logo"></li>
-					<li class="active"><a href="{{ $href[0] }}" class="page-scroll"><h4><strong>INICIO</strong></h4><h5 class="subtitulo"><i>todo comienza aqui</i></h5></a></li>
-					<li><a href="{{ $href[1] }}" class="page-scroll"><h4><strong>SERVICIOS</strong></h4><h5 class="subtitulo"><i>que hacemos</i></h5></a></li>
-					<li><a href="{{ $href[2] }}" class="page-scroll"><h4><strong>QUIENES SOMOS</strong></h4><h5 class="subtitulo"><i>nuestro equipo</i></h5></a></li>
-					<li><a href="{{ $href[3] }}" class="page-scroll"><h4><strong>PORTAFOLIO</strong></h4><h5 class="subtitulo"><i>nuestros clientes</i></h5></a></li>
-					<li><a href="{{ $href[4] }}" class="page-scroll"><h4><strong>CONTACTO</strong></h4><h5 class="subtitulo"><i>solicte presupuesto</i></h5></a></li>
+					<li class="active"><a href="{{ $href[0] }}" data-target-value="{{ $href[0] }}" class="page-scroll"><h4><strong>INICIO</strong></h4><h5 class="subtitulo"><i>todo comienza aqui</i></h5></a></li>
+					<li><a href="{{ $href[2] }}" data-target-value="{{ $href[2] }}" class="page-scroll"><h4><strong>QUIENES SOMOS</strong></h4><h5 class="subtitulo"><i>nuestro equipo</i></h5></a></li>
+					<li><a href="{{ $href[1] }}" data-target-value="{{ $href[1] }}" class="page-scroll"><h4><strong>SERVICIOS</strong></h4><h5 class="subtitulo"><i>que hacemos</i></h5></a></li>
+					<li><a href="{{ $href[3] }}" data-target-value="{{ $href[3] }}" class="page-scroll"><h4><strong>PORTAFOLIO</strong></h4><h5 class="subtitulo"><i>nuestros clientes</i></h5></a></li>
+					<li><a href="{{ $href[4] }}" data-target-value="{{ $href[4] }}" class="page-scroll"><h4><strong>CONTACTO</strong></h4><h5 class="subtitulo"><i>solicte presupuesto</i></h5></a></li>
 					<!-- other items here -->
 				</ul>
 			</nav>
@@ -93,16 +93,17 @@
 		</div>
 	</body>
 	{{ HTML::script('js/jquery.min.js')}}
-	{{ HTML::script('js/bootstrap.min.js') }}
 	{{ HTML::script('js/scroll/jquery.nicescroll.min.js') }}
 	{{ HTML::script('js/slick-master/slick/slick.min.js') }}
+	{{ HTML::script('js/bootstrap.min.js') }}
 	{{ HTML::script("js/jquery.easing.min.js") }}
 	{{ HTML::script('js/material.min.js') }}
 	{{ HTML::script('js/ripples.min.js') }}
+	{{ HTML::script('js/scrolling-nav.js') }}
 	{{ HTML::script('js/custom.js') }}	
     <script>
     	jQuery(document).ready(function($) {
-    	$.material.init();
+    		$.material.init();
     	});
     </script>
     @yield('postscript')
