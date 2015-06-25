@@ -1,9 +1,11 @@
 @extends('layouts.main')
 @section('content')
 
-<div id="collapse-about" class="collapse-navigation" data-toggle="collapse" data-target="#about">
-	<div class="col-xs-3"></div>	
-	<div class="col-xs-9 btn btn-flat">
+<div id="collapse-about" class="collapse-navigation btn btn-flat waves-effect" data-toggle="collapse" data-target="#about">
+	<div class="col-xs-3 light-green accent-4">
+		<i class="fa fa-5x fa-icon-movil my-fa fa-laptop"></i>
+	</div>	
+	<div class="col-xs-9 ">
 		<div class="table-cell">
 			<h3>QUIENES SOMOS</h3><h5>Nuestro equipo</h5>
 		</div>
@@ -45,9 +47,11 @@
 		
 	</div>
 </div>
-<div id="collapse-project" class="collapse-navigation" data-toggle="collapse" data-target="#project">
-	<div class="col-xs-3"></div>
-	<div class="col-xs-9 btn btn-flat" data-color="">
+<div id="collapse-project" class="collapse-navigation btn btn-flat waves-effect" data-toggle="collapse" data-target="#project">
+	<div class="col-xs-3 orange darken-3">
+		<i class="fa fa-5x fa-icon-movil my-fa fa-pencil-square-o"></i>
+	</div>
+	<div class="col-xs-9 " data-color="">
 		<div class="table-cell">
 			<h3>SERVICIOS</h3><h5>que hacemos</h5>
 		</div>
@@ -123,20 +127,11 @@
 	</div>
 </div>
 
-<div class="modal fade" id="showImg" tabindex="-1" role="dialog" aria-labelledby="showImg" aria-hidden="true">
-		<div class="modal-dialog imgLiderUp">
-			<div class="modal-content">
-				<div class="modal-header">
-					<a type="button" class="close page-scroll" href="#news" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></a>
-					<img src="" class="modalImg">
-				</div>
-					
-			</div>
-		</div>
-</div>
-<div id="collapse-news" class="collapse-navigation" data-toggle="collapse" data-target="#news">
-	<div class="col-xs-3"></div>
-	<div class="col-xs-9 btn btn-flat" data-color="">
+<div id="collapse-news" class="collapse-navigation btn btn-flat waves-effect" data-toggle="collapse" data-target="#news">
+	<div class="col-xs-3 deep-orange accent-3">
+		<i class="fa fa-5x fa-icon-movil my-fa fa-print"></i>
+	</div>
+	<div class="col-xs-9 " data-color="">
 		<div class="table-cell">
 			<h3>PORTAFOLIO</h3><h5>Nuestros clientes</h5>
 		</div>
@@ -153,8 +148,8 @@
 			<div class="container">
 				<div class="row news" style="margin-bottom: 5em;">
 					<div class="col-xs-6  text-left contNewsPics">
-						<div class="col-xs-12 newsPics">
-							<img class="img-responsive picsGall" data-toggle="modal" data-target="#showImg" src="images/picNews/pagina web benedettococina-01.jpg"/>
+						<div class="col-xs-12 newsPics image-left">
+							<img class="img-responsive materialboxed picsGall" data-toggle="modal" data-target="#showImg" src="images/picNews/pagina web benedettococina-01.jpg"/>
 						</div>
 						<div class="col-xs-12">
 							<h3 class="titPort"><a href="#">Benedetto Cocina</a></h3>
@@ -163,8 +158,8 @@
 						</div>
 					</div>
 					<div class="col-xs-6 text-right contNewsPics">
-						<div class="col-xs-12 newsPics">
-							<img class="img-responsive picsGall" data-toggle="modal" data-target="#showImg" src="images/picNews/pagina web carlota marquez-01.jpg"/>
+						<div class="col-xs-12 newsPics image-right">
+							<img class="img-responsive materialboxed picsGall" data-toggle="modal" data-target="#showImg" src="images/picNews/pagina web carlota marquez-01.jpg"/>
 						</div>
 						<div class="col-xs-12">
 							<h3 class="titPort"><a href="#">Carlota Marques</a></h3>
@@ -177,18 +172,18 @@
 			<div class="container">
 				<div class="row news2 news">
 					<div class="col-xs-6 text-left contNewsPics">
-						<div class="col-xs-12 newsPics">
-							<img class="img-responsive picsGall" data-toggle="modal" data-target="#showImg" src="images/picNews/pagina web motopanama-01.jpg"/>
+						<div class="col-xs-12 newsPics image-left">
+							<img class="img-responsive materialboxed picsGall" data-toggle="modal" data-target="#showImg" src="images/picNews/pagina web motopanama-01.jpg"/>
 						</div>
 						<div class="col-xs-12">
 							<h3 class="titPort"><a href="#">Moto Panana</a></h3>
 							<p class="cont textoBlanco textoPromedio">Diseño de página web, portal de comercialización de motos en Panamá.</p>
+							<hr class="hrNews">
 						</div>
-						<hr class="hrNews">
 					</div>
 					<div class="col-xs-6 text-right contNewsPics">
-						<div class="col-xs-12 newsPics">
-							<img class="img-responsive picsGall" data-toggle="modal" data-target="#showImg" src="images/picNews/pagina web rancho burguer-01-01.jpg"/>
+						<div class="col-xs-12 newsPics image-right">
+							<img class="img-responsive materialboxed picsGall" data-toggle="modal" data-target="#showImg" src="images/picNews/pagina web rancho burguer-01-01.jpg"/>
 						</div>
 						<div class="col-xs-12">
 							<h3 class="titPort"><a href="#">Rancho Burguer</a></h3>
@@ -201,8 +196,8 @@
 			<div class="container">
 				<div class="row news2 news">
 					<div class="col-xs-6 text-left contNewsPics">
-						<div class="col-xs-12 newsPics">
-							<img class="img-responsive picsGall" data-toggle="modal" data-target="#showImg" src="images/picNews/pagina web solodeportes-01.jpg"/>
+						<div class="col-xs-12 newsPics image-left">
+							<img class="img-responsive materialboxed picsGall" data-toggle="modal" data-target="#showImg" src="images/picNews/pagina web solodeportes-01.jpg"/>
 						</div>
 						<div class="col-xs-12">
 							<h3 class="titPort"><a href="#">Solodeportes.net</a></h3>
@@ -210,9 +205,10 @@
 							<hr class="hrNews">
 						</div>
 					</div>
+					
 					<div class="col-xs-6 text-right contNewsPics">
-						<div class="col-xs-12 newsPics">
-							<img class="img-responsive picsGall" data-toggle="modal" data-target="#showImg" src="images/picNews/paqina web peluqueria-01.jpg"/>
+						<div class="col-xs-12 newsPics image-right">
+							<img class="img-responsive materialboxed picsGall" data-toggle="modal" data-target="#showImg" src="images/picNews/paqina web peluqueria-01.jpg"/>
 						</div>
 						<div class="col-xs-12">
 							<h3 class="titPort"><a href="#">Fashion Gils</a></h3>
@@ -243,23 +239,25 @@
 				<li><h2>+58 (0423) 431.26.99</h2></li>
 			</ul>
 			<div class="redMarco">
-				<i class="fa fa-facebook-official red"></i>
+				<i class="fa fa-facebook-official redIcon"></i>
 			</div>
 			<div class="redMarco">
-				<i class="fa fa-twitter red"></i>
+				<i class="fa fa-twitter redIcon"></i>
 			</div>
 			<div class="redMarco">
-				<i class="fa fa-google-plus red"></i>
+				<i class="fa fa-google-plus redIcon"></i>
 			</div>
 			<div class="redMarco">
-				<i class="fa fa-instagram red"></i>
+				<i class="fa fa-instagram redIcon"></i>
 			</div>
 		</div>
 	</div>
 </div>
-<div id="collapse-contact" class="collapse-navigation" data-toggle="collapse" data-target="#contact">
-	<div class="col-xs-3"></div>
-	<div class="col-xs-9 btn btn-flat" data-color="">
+<div id="collapse-contact" class="collapse-navigation btn btn-flat waves-effect" data-toggle="collapse" data-target="#contact">
+	<div class="col-xs-3 light-blue accent-3">
+		<i class="fa fa-5x fa-icon-movil my-fa fa-file-image-o"></i>
+	</div>
+	<div class="col-xs-9 " data-color="">
 		<div class="table-cell">
 			<h3>CONTACTO</h3><h5>Solicite presupuesto</h5>
 		</div>
@@ -291,7 +289,6 @@
 						</div>
 						<div class="col-xs-12">
 						    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d125629.77593697135!2d-67.60541045!3d10.26718390000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e803c989377fe87%3A0xb5ff524dadae5b74!2sMaracay!5e0!3m2!1ses-419!2sve!4v1434394978178" width="500" height="275" frameborder="1" style="border:1"></iframe>
-		      				<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
  
 						</div>
 					</div>
@@ -301,19 +298,33 @@
 							<div class="alert alert-success responseAlert">
 								
 							</div>
-							<fieldset>
+							<div class="input-field">
+								 <i class="prefix fa fa-user"></i>
+								<input id="name" type="text" class="validate formInput name" name="name" required>
+          						<label for="name" data-error="Debe llenar el campo" data-success="">Nombre*</label>
+							</div>
+							<div class="input-field">
+								<i class="prefix fa fa-envelope"></i>
 
-								<div class="form-group">
-									<input type="text" class="form-control formInput name " name="name" placeholder='Nombre *'/>
-									<input type="text" class="form-control formInput email" name="email" placeholder='Email *'/>
-									<input type="text" class="form-control formInput subject" name="subject" placeholder='Asunto'/>
-									<textarea type="text" class="form-control formInput message" name="message" placeholder='Mensaje *' rows="7"></textarea>
-								</div>
-							</fieldset>
+								<input id="email" type="email" class="validate formInput email" name="email">
+          						<label for="email">Email*</label>
+							</div>
+							<div class="input-field">
+								<i class="prefix fa fa-pencil-square-o"></i>
+								<input id="subject" type="text" class="validate formInput subject" name="subject">
+          						<label for="subject">Asunto*</label>
+							</div>
+							<div class="input-field">
+								<i class="prefix fa fa-comments"></i>
+								<textarea type="text" class="materialize-textarea formInput message" name="message" rows="7"></textarea>
+								<label for="message">Mensaje*</label>
+							</div>
 							<div class="cBtn col-xs-12" style="padding-left: 0px;">
 								<ul class="ulContact" style="padding-left: 0px;">
-									<li class="btn clear btn-material-blue-grey-50"><span>Borrar Campos</span></li>
-									<li class="btn send btn-material-blue-grey-50"><span>Enviar Mensaje</span></li>
+									<li class="btn waves-effect clear btn-material-blue-grey-50"><i class="fa fa-eraser"></i>
+ <span>Borrar Campos</span></li>
+									<li class="btn waves-effect send btn-material-blue-grey-50"><i class="fa fa-paper-plane"></i>
+ <span>Enviar Mensaje</span></li>
 								</ul>
 							</div>
 					</div>
@@ -342,9 +353,6 @@
 				
 			
 			});
-			
-
-			
 
 			
 		</script>
