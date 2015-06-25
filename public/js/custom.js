@@ -10,6 +10,14 @@ jQuery(document).ready(function($) {
 			$("html").niceScroll();
 		}
 	});
+	$('.newsPics').click(function(event) {
+		if ($(this).hasClass('newsPics-activo')) {
+			$(this).removeClass('newsPics-activo');
+		}else{
+			
+			$(this).addClass('newsPics-activo');
+		}
+	});
 });
 
 $(document).ready(function() {
@@ -30,6 +38,9 @@ $(document).ready(function() {
 	$(window).scroll(function(event) {
 		cambiarNav();
 	});
+});
+$('.clear').click(function(event) {
+	$('.formInput').val('');
 });
 
 $('.send').click(function(event) {
@@ -193,14 +204,15 @@ jQuery(document).ready(function($) {
 	
 });
 jQuery(document).ready(function($) {
-	$('.collapse-navigation').click(function(event) {
+	$('.collapse-navigation').on('click',function(event) {
+
 		var id = $(this).attr('data-target');
 
 		if ($('.in').length > 0) {
 			$('.in:not('+id+')').animate({'height':0},500,function(){$('.in:not('+id+')').removeClass('in') })
 		}
 
-		$(window).scrollTop($(this).offset().top)
+		
 	});
 });
 	

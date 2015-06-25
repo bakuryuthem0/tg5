@@ -4,13 +4,35 @@
 	<img src="{{ asset('images/loader.gif')}}" class="loadingInBlack">
 </div>
 @foreach($all as $a)
-	<div id="collapse-{{ str_replace('_','-',$a->image) }}" class="collapse-navigation-service btn btn-flat" data-este-servicio="{{ str_replace('_','-',$a->image) }}" data-esto-id="{{ $a->id }}">
-		<div class="col-xs-3">
-			<img src="{{ asset('images/'.$a->image.'.png') }}">
+			@if($a->id == 1)
+			<div id="collapse-{{ str_replace('_','-',$a->image) }}" class="collapse-navigation-service btn btn-flat waves-effect light-green accent-4" data-este-servicio="{{ str_replace('_','-',$a->image) }}" data-esto-id="{{ $a->id }}">
+				<div class="col-xs-3">
+					<i class="fa fa-5x fa-icon-movil-service my-fa fa-laptop"></i>
+			@elseif($a->id == 2)
+			<div id="collapse-{{ str_replace('_','-',$a->image) }}" class="deep-orange accent-3 collapse-navigation-service btn btn-flat waves-effect" data-este-servicio="{{ str_replace('_','-',$a->image) }}" data-esto-id="{{ $a->id }}">
+				<div class="col-xs-3">
+					<i class="fa fa-5x fa-icon-movil-service my-fa fa-pencil-square-o"></i>
+			@elseif($a->id == 3)
+			<div id="collapse-{{ str_replace('_','-',$a->image) }}" class="orange darken-3 collapse-navigation-service btn btn-flat waves-effect" data-este-servicio="{{ str_replace('_','-',$a->image) }}" data-esto-id="{{ $a->id }}">
+				<div class="col-xs-3 ">
+					<i class="fa fa-5x fa-icon-movil-service my-fa fa-print"></i>
+			@elseif($a->id == 4)
+			<div id="collapse-{{ str_replace('_','-',$a->image) }}" class="light-blue accent-3 collapse-navigation-service btn btn-flat waves-effect" data-este-servicio="{{ str_replace('_','-',$a->image) }}" data-esto-id="{{ $a->id }}">
+				<div class="col-xs-3 ">
+					<i class="fa fa-5x fa-icon-movil-service my-fa fa-file-image-o"></i>
+			@elseif($a->id == 5)
+			<div id="collapse-{{ str_replace('_','-',$a->image) }}" class="light-green accent-3 collapse-navigation-service btn btn-flat waves-effect" data-este-servicio="{{ str_replace('_','-',$a->image) }}" data-esto-id="{{ $a->id }}">
+				<div class="col-xs-3  ">
+					<i class="fa fa-5x fa-icon-movil-service my-fa fa-camera"></i>
+			@elseif($a->id == 6)
+			<div id="collapse-{{ str_replace('_','-',$a->image) }}" class="light-blue darken-4 collapse-navigation-service btn btn-flat waves-effect" data-este-servicio="{{ str_replace('_','-',$a->image) }}" data-esto-id="{{ $a->id }}">
+				<div class="col-xs-3">
+					<i class="fa fa-5x fa-icon-movil-service my-fa fa-sitemap"></i>
+			@endif
 		</div>	
 		<div class="col-xs-9 ">
 			<div class="table-cell">
-				<h3>{{ strtoupper($a->nombre) }}</h3><i class="fa fa-caret-down caretfa"></i>
+				<h4>{{ strtoupper($a->nombre) }}</h4><i class="fa fa-caret-down caretfa"></i>
 			</div>
 		</div>
 		<div class="ripple-wrapper"></div>
@@ -60,7 +82,7 @@
 		<div class="row">
 			<div class="col-xs-12">
 				<div class="col-xs-6 contCatalogo" style="margin-top:2em;">
-					<a href="" class="catalogo"></a><button class="btn btn-primary btn-catalogo">Catalogo</button>
+					<a href="#" class="catalogo btn btn-primary btn-catalogo">Catalogo</a>
 				</div>
 				<div class="col-xs-12" style="margin-top:2em;">
 					<div class="fb-like" data-href="{{ $refer }}" data-layout="standard" data-action="like" data-show-faces="true" data-share="true"></div>
@@ -80,10 +102,10 @@
 			<div class="col-xs-12">
 				<div id="options" class="col-xs-12" style="text-align: center;margin-top:2em;">	
 					<ul class="ulContact" style="padding-left: 0px;">
-						<li class="btn clear btn-ini btn-material-blue-grey-200" style="margin-bottom:1em;margin-top:0px;"><a class="selected ini" href="{{ URL::to('servicios/'.$id) }}" style="text-decoration:none;">Inicio</a></li>
+						<li class="btn clear btn-ini" style="margin-bottom:1em;margin-top:0px;"><a class="selected ini" href="{{ URL::to('servicios/'.$id) }}" style="text-decoration:none;">Inicio</a></li>
 						@foreach($servicios as $clave => $servicio)
 							<a class="serv_mini" href="#." id="{{ $servicio->title }}" data-option-value="{{ $servicio->id }}">
-								<li class="btn clear btn-serv btn-material-blue-grey-200" style="margin-bottom:1em;">
+								<li class="btn clear btn-serv waves-effect" style="margin-bottom:1em;">
 									{{ ucwords(str_replace('_',' ',$servicio->nombre)) }}
 								</li>
 							</a>

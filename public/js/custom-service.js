@@ -1,4 +1,30 @@
 jQuery(document).ready(function($) {
+	if ($(window).width() < 991) {
+			$('body').css('padding-top', '70px');
+			$('.logo').css('display', 'none');
+			$('#cd-intro').addClass('collapse');
+	}else
+	{
+		if (!$('body').hasClass('bodyservice')) {
+			$('body').css('padding-top', '0px');
+		}
+		
+	}
+	$(window).resize(function(event) {
+		if ($(window).width() < 991) {
+			$('body').css('padding-top', '70px');
+		}else
+		{
+			if (!$('body').hasClass('bodyservice')) {
+				$('body').css('padding-top', '0px');
+			}
+
+
+		}
+	});
+	
+});
+jQuery(document).ready(function($) {
 	function servClick(esto)
 	{
 		$('.btn-info').removeClass('btn-info');
