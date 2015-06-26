@@ -67,72 +67,76 @@
 					<li><a href="{{ $href[4] }}" class="waves-effect waves-light btn page-scroll"><h4><strong>CONTACTO</strong></h4><h5 class="subtitulo"><i>solicte presupuesto</i></h5></a></li>
 					<!-- other items here -->
 				</ul>
-			</nav>
-			<nav class="Movil">
-				<ul>
-					<li class="active">
-						<a href="{{ $href[0] }}" class="page-scroll">
-							<div id="collapse-about" class="collapse-navigation ">
-								<div class="col-xs-3">
-									<img src="{{ asset('images/diseno_web.png') }}">
-								</div>	
-								<div class="col-xs-9">
-									<div class="table-cell">
-										<h3>INICIO</h3><h5>todo comienza aqui</h5>
 
-									</div>
-								</div>
-							</div>
-						</a>
-					</li>
-					<li>
-						<a href="{{ $href[1] }}" class="page-scroll">
-							<div id="collapse-project" class="collapse-navigation">
-								<div class="col-xs-3">
-									<img src="{{ asset('images/medios_impresos.png') }}">
-								</div>
-								<div class="col-xs-9">
-									<div class="table-cell">
-										<h3>QUIENES SOMOS</h3><h5>Nuestro equipo</h5>
-
-									</div>
-								</div>
-							</div>
-						</a>
-					</li>
-					
-					<li><a href="{{ $href[3] }}" class="page-scroll">
-						<div id="collapse-news" class="collapse-navigation">
-							<div class="col-xs-3">
-								<img src="{{ asset('images/imagen_corporativa.png') }}">
-							</div>
-							<div class="col-xs-9">
-								<div class="table-cell">
-									<h3>PORTAFOLIO</h3><h5>Nuestros clientes</h5>
-								</div>
-							</div>
-						</div>
-						</a>
-					</li>
-					<li><a href="{{ $href[4] }}" class="page-scroll">
-						<div id="collapse-contact" class="collapse-navigation" data-toggle="collapse" data-target="#contact">
-							<div class="col-xs-3">
-								<img src="{{ asset('images/sistema_administrativo.png') }}">
-							</div>
-							<div class="col-xs-9">
-								<div class="table-cell">
-									<h3>CONTACTO</h3><h5>Solicite presupuesto</h5>
-								</div>
-							</div>
-						</div>
-						</a>
-					</li>
-					<!-- other items here -->
-				</ul>
 			</nav>
+			<nav id="slide-out" class="Movil waves-effect" data-toggle="collapse" data-target=".ulnavbar">
+				<a href="#" data-activates="slide-out" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
+			</nav>
+			
 		</div> <!-- .cd-secondary-nav -->
-		
+		<ul class="ulnavbar collapse">
+			<li class="active">
+				<a href="{{ $href[0] }}" class="page-scroll">
+					<div id="collapse-about" class="collapse-navigation btn btn-flat waves-effect">
+						<div class="col-xs-3 light-green accent-4">
+							<i class="fa fa-5x fa-icon-movil my-fa fa-laptop"></i>
+						</div>	
+						<div class="col-xs-9">
+							<div class="table-cell">
+								<h4>INICIO</h4><h5>todo comienza aqui</h5>
+
+							</div>
+						</div>
+					</div>
+				</a>
+			</li>
+			<li>
+				<a href="{{ $href[1] }}" class="page-scroll">
+					<div id="collapse-project" class="collapse-navigation btn btn-flat waves-effect">
+						<div class="col-xs-3 deep-orange accent-3 ">
+							<i class="fa fa-5x fa-icon-movil my-fa fa-pencil-square-o"></i>
+
+						</div>
+						<div class="col-xs-9">
+							<div class="table-cell">
+								<h4>QUIENES SOMOS</h4><h5>Nuestro equipo</h5>
+
+							</div>
+						</div>
+					</div>
+				</a>
+			</li>
+			
+			<li><a href="{{ $href[3] }}" class="page-scroll">
+				<div id="collapse-news" class="collapse-navigation btn btn-flat waves-effect">
+					<div class="col-xs-3 orange darken-3">
+						<i class="fa fa-5x fa-icon-movil my-fa fa-print"></i>
+					</div>
+					<div class="col-xs-9">
+						<div class="table-cell">
+							<h4>PORTAFOLIO</h4><h5>Nuestros clientes</h5>
+						</div>
+					</div>
+				</div>
+				</a>
+			</li>
+			<li><a href="{{ $href[4] }}" class="page-scroll">
+				<div id="collapse-contact" class="collapse-navigation btn btn-flat waves-effect" data-toggle="collapse" data-target="#contact">
+					<div class="col-xs-3 light-blue accent-3">
+						<i class="fa fa-5x fa-icon-movil my-fa fa-file-image-o"></i>
+					</div>
+					<div class="col-xs-9">
+						<div class="table-cell">
+							<h4>CONTACTO</h4><h5>Solicite presupuesto</h5>
+						</div>
+					</div>
+				</div>
+				</a>
+			</li>
+			<!-- other items here -->
+		</ul>
 		@yield('content')
+		<div class="fondo-blanco"></div>
 		<div class="row">
 			<footer class="col-xs-12 footer">
 		    	<div class="col-xs-6 cien">
@@ -151,12 +155,7 @@
 	{{ HTML::script('js/materialize.min.js') }}
 	{{ HTML::script("js/jquery.easing.min.js") }}
 	{{ HTML::script('js/custom-service.js') }}
-	<script>
-    	jQuery(document).ready(function($) {
-    	$.material.init();
-    	});
-    </script>
-
+	
     @yield('postscript')
   
 	

@@ -3,44 +3,8 @@
 <div class="contLoading">
 	<img src="{{ asset('images/loader.gif')}}" class="loadingInBlack">
 </div>
-@foreach($all as $a)
-			@if($a->id == 1)
-			<div id="collapse-{{ str_replace('_','-',$a->image) }}" class="collapse-navigation-service btn btn-flat waves-effect light-green accent-4" data-este-servicio="{{ str_replace('_','-',$a->image) }}" data-esto-id="{{ $a->id }}">
-				<div class="col-xs-3">
-					<i class="fa fa-5x fa-icon-movil-service my-fa fa-laptop"></i>
-			@elseif($a->id == 2)
-			<div id="collapse-{{ str_replace('_','-',$a->image) }}" class="deep-orange accent-3 collapse-navigation-service btn btn-flat waves-effect" data-este-servicio="{{ str_replace('_','-',$a->image) }}" data-esto-id="{{ $a->id }}">
-				<div class="col-xs-3">
-					<i class="fa fa-5x fa-icon-movil-service my-fa fa-pencil-square-o"></i>
-			@elseif($a->id == 3)
-			<div id="collapse-{{ str_replace('_','-',$a->image) }}" class="orange darken-3 collapse-navigation-service btn btn-flat waves-effect" data-este-servicio="{{ str_replace('_','-',$a->image) }}" data-esto-id="{{ $a->id }}">
-				<div class="col-xs-3 ">
-					<i class="fa fa-5x fa-icon-movil-service my-fa fa-print"></i>
-			@elseif($a->id == 4)
-			<div id="collapse-{{ str_replace('_','-',$a->image) }}" class="light-blue accent-3 collapse-navigation-service btn btn-flat waves-effect" data-este-servicio="{{ str_replace('_','-',$a->image) }}" data-esto-id="{{ $a->id }}">
-				<div class="col-xs-3 ">
-					<i class="fa fa-5x fa-icon-movil-service my-fa fa-file-image-o"></i>
-			@elseif($a->id == 5)
-			<div id="collapse-{{ str_replace('_','-',$a->image) }}" class="light-green accent-3 collapse-navigation-service btn btn-flat waves-effect" data-este-servicio="{{ str_replace('_','-',$a->image) }}" data-esto-id="{{ $a->id }}">
-				<div class="col-xs-3  ">
-					<i class="fa fa-5x fa-icon-movil-service my-fa fa-camera"></i>
-			@elseif($a->id == 6)
-			<div id="collapse-{{ str_replace('_','-',$a->image) }}" class="light-blue darken-4 collapse-navigation-service btn btn-flat waves-effect" data-este-servicio="{{ str_replace('_','-',$a->image) }}" data-esto-id="{{ $a->id }}">
-				<div class="col-xs-3">
-					<i class="fa fa-5x fa-icon-movil-service my-fa fa-sitemap"></i>
-			@endif
-		</div>	
-		<div class="col-xs-9 ">
-			<div class="table-cell">
-				<h4>{{ strtoupper($a->nombre) }}</h4><i class="fa fa-caret-down caretfa"></i>
-			</div>
-		</div>
-		<div class="ripple-wrapper"></div>
-	</div>
-	<div id="{{str_replace('_','-',$a->image)}}"></div>
-@endforeach
-
-<div id="pagina_aparte" class="{{ $servicio }} row" data-servicio-id="{{ $id }}" data-servicio-nombre="{{ str_replace('_','-',$serv->image) }}">
+<div class="ubicaciondepaginaaparte"></div>
+<div id="pagina_aparte" class="{{ str_replace('_','-',$serv->image) }} row collapse in" data-target-pos="{{ str_replace('_','-',$serv->image) }}" data-id-set="{{ $serv->id }}">
 	<div class="container">
 		<div class="row">
 			<!-- filter_block -->
@@ -82,7 +46,7 @@
 		<div class="row">
 			<div class="col-xs-12">
 				<div class="col-xs-6 contCatalogo" style="margin-top:2em;">
-					<a href="#" class="catalogo btn btn-primary btn-catalogo">Catalogo</a>
+					<a href="#." class="catalogo btn btn-primary btn-catalogo waves-effect">Catalogo</a>
 				</div>
 				<div class="col-xs-12" style="margin-top:2em;">
 					<div class="fb-like" data-href="{{ $refer }}" data-layout="standard" data-action="like" data-show-faces="true" data-share="true"></div>
@@ -116,6 +80,44 @@
 		</div>
 	</div>
 </div>
+@foreach($all as $a)
+			@if($a->id == 1)
+			<div id="collapse-{{ str_replace('_','-',$a->image) }}" class="collapse-navigation-service btn btn-flat waves-effect light-green accent-4" data-toggle="collapse" data-target="{{ str_replace('_','-',$a->image) }}" data-servicio-id="{{ $a->id }}">
+				<div class="col-xs-3">
+					<i class="fa fa-5x fa-icon-movil-service my-fa fa-laptop"></i>
+			@elseif($a->id == 2)
+			<div id="collapse-{{ str_replace('_','-',$a->image) }}" class="deep-orange accent-3 collapse-navigation-service btn btn-flat waves-effect" data-toggle="collapse" data-target="{{ str_replace('_','-',$a->image) }}" data-servicio-id="{{ $a->id }}">
+				<div class="col-xs-3">
+					<i class="fa fa-5x fa-icon-movil-service my-fa fa-pencil-square-o"></i>
+			@elseif($a->id == 3)
+			<div id="collapse-{{ str_replace('_','-',$a->image) }}" class="orange darken-3 collapse-navigation-service btn btn-flat waves-effect" data-toggle="collapse" data-target="{{ str_replace('_','-',$a->image) }}" data-servicio-id="{{ $a->id }}">
+				<div class="col-xs-3 ">
+					<i class="fa fa-5x fa-icon-movil-service my-fa fa-print"></i>
+			@elseif($a->id == 4)
+			<div id="collapse-{{ str_replace('_','-',$a->image) }}" class="light-blue accent-3 collapse-navigation-service btn btn-flat waves-effect" data-toggle="collapse" data-target="{{ str_replace('_','-',$a->image) }}" data-servicio-id="{{ $a->id }}">
+				<div class="col-xs-3 ">
+					<i class="fa fa-5x fa-icon-movil-service my-fa fa-file-image-o"></i>
+			@elseif($a->id == 5)
+			<div id="collapse-{{ str_replace('_','-',$a->image) }}" class="light-green accent-3 collapse-navigation-service btn btn-flat waves-effect" data-toggle="collapse" data-target="{{ str_replace('_','-',$a->image) }}" data-servicio-id="{{ $a->id }}">
+				<div class="col-xs-3  ">
+					<i class="fa fa-5x fa-icon-movil-service my-fa fa-camera"></i>
+			@elseif($a->id == 6)
+			<div id="collapse-{{ str_replace('_','-',$a->image) }}" class="light-blue darken-4 collapse-navigation-service btn btn-flat waves-effect" data-toggle="collapse" data-target="{{ str_replace('_','-',$a->image) }}" data-servicio-id="{{ $a->id }}">
+				<div class="col-xs-3">
+					<i class="fa fa-5x fa-icon-movil-service my-fa fa-sitemap"></i>
+			@endif
+		</div>	
+		<div class="col-xs-9 ">
+			<div class="table-cell">
+				<h4>{{ strtoupper($a->nombre) }}</h4><i class="fa fa-caret-down caretfa"></i>
+			</div>
+		</div>
+		<div class="ripple-wrapper"></div>
+	</div>
+	<div id="{{str_replace('_','-',$a->image)}}"></div>
+@endforeach
+
+
 
 @stop
 

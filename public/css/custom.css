@@ -345,7 +345,7 @@ nav > ul > li > a > h5
 	position: fixed;
 	width: 100%;
 	height: 100%;
-	background-color: rgba(0,0,0,0.8);
+	background-color: #333;
 	z-index: 100;
 }
 .cont_palabra
@@ -590,6 +590,60 @@ nav > ul > li > a > h5
 
 }
 @media(max-width: 991px){
+	h3
+	{
+		font-size: 3em;
+	}
+	h4
+	{
+		font-size: 1em;
+	}
+	h5
+	{
+		font-size: 0.8em;
+	}
+	.tgvnzlaTitulo
+	{
+		position: initial !important;
+		width: 90% !important;
+		top: 0;
+		left: 0;
+		-webkit-transform: translateY(0) !important;
+		   -moz-transform: translateY(0) !important;
+		    -ms-transform: translateY(0) !important;
+		     -o-transform: translateY(0) !important;
+		        transform: translateY(0) !important;
+	}
+	.ulnavbar
+	{
+		position: fixed;
+	    width: 100%;
+	    z-index: 10;
+	    box-shadow: 0 1px 6px -1px black;
+	}
+	.service-nav
+	{
+		height: auto !important;
+	}
+	.ulnavbar > li > a > #collapse-about > .col-xs-3,.ulnavbar > li > a > #collapse-project > .col-xs-3,.ulnavbar > li > a > #collapse-news > .col-xs-3,.ulnavbar > li > a > #collapse-contact > .col-xs-3
+	{
+		height: 100px;
+	}
+	.fondo-blanco
+	{
+		background-color: rgba(255, 255, 255, 0.7);
+		display: none;
+		height: 100%;
+		opacity: 1;
+		position: fixed;
+		top: 0;
+		width: 100%;
+		z-index: 1;
+	}
+	#pagina_aparte
+	{
+		margin-bottom: 0;
+	}
 	.fa-icon-movil
 	{
 		left: 50%;
@@ -641,6 +695,43 @@ nav > ul > li > a > h5
 	.contNewsPics
 	{
 		width: 100% !important;
+	}
+	nav.Movil
+	{
+		border-radius: 4px;
+		display: block;
+		font-size: 4em;
+		height: 50px;
+		width: 50px;
+		position: absolute;
+		right: 3% !important;
+    	top: 5%;
+    	box-shadow: 0 0px 10px -16px rgba(255, 255, 255, 0.16);
+	}
+	nav.Movil > .button-collapse
+	{
+		color: white;
+		left: 50%;
+		position: absolute;
+		top: 50%;
+		-webkit-transform: translate(-50%, -50%);
+		   -moz-transform: translate(-50%, -50%);
+		    -ms-transform: translate(-50%, -50%);
+		     -o-transform: translate(-50%, -50%);
+		        transform: translate(-50%, -50%);
+	}
+	.button-collapse-rotated
+	{
+		-webkit-transition: all .25s ease-in-out;
+		   -moz-transition: all .25s ease-in-out;
+		    -ms-transition: all .25s ease-in-out;
+		     -o-transition: all .25s ease-in-out;
+		        transition: all .25s ease-in-out;
+		-webkit-transform: rotate(90deg);
+		   -moz-transform: rotate(90deg);
+		    -ms-transform: rotate(90deg);
+		     -o-transform: rotate(90deg);
+		        transform: rotate(90deg);
 	}
 }
 @media(max-width: 768px){
@@ -757,6 +848,14 @@ nav > ul > li > a > h5
 }
 
 @media(max-width: 450px){
+	.collapse-navigation-service > .col-xs-3
+	{
+		width: 20%;
+	}
+	.fa-icon-movil-service
+	{
+		font-size: 1.5em !important;
+	}
 	.container
 	{
 		padding: 0px;
@@ -1233,6 +1332,7 @@ nav > ul > li > a > h5
 	display: block;
 }
 @media (max-width: 990px) {
+
 	.Movil
 	{
 		display: block;
@@ -1296,10 +1396,11 @@ nav > ul > li > a > h5
 		color: white;
 		text-shadow:-1px 1px black;
 	}
-	.collapse-navigation-service > .col-xs-9 > .table-cell > h3
+	.collapse-navigation-service > .col-xs-9 > .table-cell > h3,.collapse-navigation-service > .col-xs-9 > .table-cell > h4
 	{
 		display: inline-block;
 	}
+
 	#collapse-diseno-web{
 		background-color: #0DB900;
 	}
@@ -1398,7 +1499,8 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ebe8eb', end
 		position: fixed !important;
 		width: 100%;
 		height: 70px;
-		background-color: rgb(199, 199, 199) !important;
+		background-color: #333;
+		color: white;
 		top: 0;
 	}
 	.trigger-service

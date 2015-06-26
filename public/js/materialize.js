@@ -804,16 +804,7 @@ else {
       var originalHeight = 0;
       origin.wrap(placeholder);
 
-
       origin.on('click', function(){
-      	$(this).parent().parent('.newsPics').addClass('newsPics-materialized')
-      	if ($(this).parent().parent('.newsPics').hasClass('image-left')) {
-      		$(this).parent().parent('.newsPics').addClass('newsPics-materialized-left');
-      	}
-      	if ($(this).parent().parent('.newsPics').hasClass('image-right')) {
-      		$(this).parent().parent('.newsPics').addClass('newsPics-materialized-right');	
-      	};
-      	$(this).addClass('newsPics-image-materialized');
         var placeholder = origin.parent('.material-placeholder');
         var windowWidth = window.innerWidth;
         var windowHeight = window.innerHeight;
@@ -942,13 +933,7 @@ else {
     }); // End origin on click
 
 
-      // Return on scroll
-      /*$(window).scroll(function() {
-        if (overlayActive ) {
-          returnToOriginal();
-        }
-      });
-	*/
+      
       // Return on ESC
       $(document).keyup(function(e) {
 
@@ -964,8 +949,6 @@ else {
       // This function returns the modaled image to the original spot
       function returnToOriginal() {
 
-      	  $('.newsPics-image-materialized').removeClass('newsPics-image-materialized')
-      	  $('.newsPics-materialized').removeClass('newsPics-materialized').removeClass('newsPics-materialized-left').removeClass('newsPics-materialized-right')
           doneAnimating = false;
 
           var placeholder = origin.parent('.material-placeholder');

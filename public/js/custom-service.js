@@ -1,17 +1,23 @@
 jQuery(document).ready(function($) {
 	if ($(window).width() < 991) {
-			$('body').css('padding-top', '70px');
-			$('.logo').css('display', 'none');
-			$('#cd-intro').addClass('collapse');
+		$('#pagina_aparte').appendTo('#'+$('#pagina_aparte').data('target-pos'))
+		$('body').css('padding-top', '70px');
+		$('.logo').css('display', 'none');
+		$('#cd-intro').addClass('collapse');
 	}else
 	{
 		if (!$('body').hasClass('bodyservice')) {
 			$('body').css('padding-top', '0px');
+		}else{
+			if ($('.ubicaciondepaginaaparte').children('#pagina_aparte').length<1) {
+				$('#pagina_aparte').appendTo('.ubicaciondepaginaaparte');
+			};
 		}
 		
 	}
 	$(window).resize(function(event) {
 		if ($(window).width() < 991) {
+			$('#pagina_aparte').appendTo('#'+$('#pagina_aparte').data('target-pos'))
 			$('body').css('padding-top', '70px');
 		}else
 		{
@@ -25,11 +31,20 @@ jQuery(document).ready(function($) {
 	
 });
 jQuery(document).ready(function($) {
+	$('.ulnavbar').on('shown.bs.collapse', function(event) {
+		$('.fondo-blanco').css({
+			'display':'block'
+		});
+		$('#slide-out').addClass('button-collapse-rotated')
+	});
+	$('.ulnavbar').on('hidden.bs.collapse', function(event) {
+		$('.fondo-blanco').css({
+			'display':'none'
+		});
+		$('.button-collapse-rotated').removeClass('button-collapse-rotated');
+	});
 	function servClick(esto)
 	{
-		$('.btn-info').removeClass('btn-info');
-	    esto.addClass('btn-info');
-
 		var nombre = esto.attr('id');
 		var id = esto.attr('data-option-value');
 		dataPost = {'nombre':nombre,'id':id};
@@ -111,20 +126,19 @@ jQuery(document).ready(function($) {
     });
 
 	$('.collapse-navigation-service').click(function(event) {
-		var id = $(this).data('esto-id')
-		/*fasil*/
+
+		var id = $(this).data('servicio-id')
+		/*facil*/
 		//window.location.href = 'http://localhost/tg5/public/servicios/'+id
 		if ($('.in').length > 0) {
-			if ($(this).data('esto-id') == $('#pagina_aparte').data('servicio-id'))
+			if (id == $('#pagina_aparte').data('id-set'))
 			{
 				$('.in').css({'overflow':'hidden','min-height':0}).animate({'height':0},500,function(){ $('.in').removeClass('in') })
 			}else
 			{
 
-				var pos = $(this).data('este-servicio');
+				var pos 	= $(this).data('target');
 				$('.in').css({'overflow':'hidden','min-height':0}).animate({'height':0},500,function(){ 
-					$(this).data('servicio-id', id);
-					$(this).data('servicio-nombre', pos)
 					$('.in').removeClass('in') 
 					$.ajax({
 						url: 'movil',
@@ -146,32 +160,35 @@ jQuery(document).ready(function($) {
 		                        		'opacity':1
 		                        	});
 
-								$('#pagina_aparte').appendTo('#'+pos);	
+								$('#pagina_aparte').appendTo('.'+pos);	
 	                        });
 							
 						},
 						success:function(response)
 						{
+							$('#pagina_aparte').data('id-set',id).data('target-pos',pos);
+							$('#pagina_aparte').appendTo('#'+pos);
+							$("html").niceScroll({preservenativescrolling: true});
+									
+		                    	$('.h_titulo').html(response.serv[0].nombre)
+			                            
+		                    	$('.text_description').remove()
+		                    	$('#text').html('<p class="text_description textoPromedio">'+response.serv[0].servicios_desc+'</p>')
+			                                  
+		                        $('.img1').attr('src','../images/pc/'+response.serv[0].image+'.png');
+		                        $('.ini').attr('href', 'http://localhost/tg5/public/servicios/'+id);
+		                        $('.btn-serv').remove();
+		                        for(var i = 0; i< response.contserv.length;i++)
+		                        {
+			                        	$('.ulContact').append('<a class="serv_mini" href="#." id="'+response.contserv[i].title+'" data-option-value="'+response.contserv[i].id+'"><li class="btn clear btn-serv" style="margin-bottom:1em;">'+response.contserv[i].nombre.replace('_',' ')+'</li></a>')
+		                        }
 							 $('.contLoading').animate({
 		                        'opacity':0
 		                        },
 		                        500,function(){
-		                        	$("html").niceScroll({preservenativescrolling: true});
+		                        	
 		                            $(this).css({'display':'none'});
 		                            $('.loadingInBlack').remove();
-									
-			                    	$('.h_titulo').html(response.serv[0].nombre)
-			                            
-			                    	$('.text_description').remove()
-			                    	$('#text').html('<p class="text_description textoPromedio">'+response.serv[0].servicios_desc+'</p>')
-			                                  
-			                        $('.img1').attr('src','../images/pc/'+response.serv[0].image+'.png');
-			                        $('.ini').attr('href', 'http://localhost/tg5/public/servicios/'+id);
-			                        $('.btn-serv').remove();
-			                        for(var i = 0; i< response.contserv.length;i++)
-			                        {
-				                        	$('.ulContact').append('<a class="serv_mini" href="#." id="'+response.contserv[i].title+'" data-option-value="'+response.contserv[i].id+'"><li class="btn clear btn-serv" style="margin-bottom:1em;">'+response.contserv[i].nombre.replace('_',' ')+'</li></a>')
-			                        }
 			                        $('.serv_mini').click(function(event) {
 										servClick($(this))
 									});
@@ -188,13 +205,12 @@ jQuery(document).ready(function($) {
 			}
 		}else
 		{
-			if ($(this).data('esto-id') == $('#pagina_aparte').data('servicio-id')) {
-				$('#pagina_aparte').animate({'height':500},500,function(){ $(this).addClass('in').css({'min-height':500})});
+			if (id == $('#pagina_aparte').data('id-set')) {
+				$('#pagina_aparte').animate({'height':500},500,function(){ $(this).addClass('in').css({'height':'auto'})});
 			}else
 			{
-				var pos = $(this).data('este-servicio');
-				$('#pagina_aparte').data('servicio-id', id);
-				$('#pagina_aparte').data('servicio-nombre', pos)
+				var pos 	= $(this).data('target');
+				
 				$.ajax({
 					url: 'movil',
 					type: 'POST',
@@ -215,12 +231,26 @@ jQuery(document).ready(function($) {
 	                        		'opacity':1
 	                        	});
 
-							$('#pagibna_aparte').appendTo('#'+pos);	
+							$('#pagibna_aparte').appendTo('.'+pos);	
                         });
 						
 					},
 					success:function(response)
 					{
+						$('#pagina_aparte').data('id-set',id).data('target-pos',pos);
+						$('#pagina_aparte').appendTo('#'+pos);
+                    	$('.h_titulo').html(response.serv[0].nombre)
+                            
+                    	$('.text_description').remove()
+                    	$('#text').html('<p class="text_description textoPromedio">'+response.serv[0].servicios_desc+'</p>')
+                                  
+                        $('.img1').attr('src','../images/pc/'+response.serv[0].image+'.png');
+                        $('.ini').attr('href', 'http://localhost/tg5/public/servicios/'+id);
+                        $('.btn-serv').remove();
+                        for(var i = 0; i< response.contserv.length;i++)
+                        {
+	                        	$('.ulContact').append('<a class="serv_mini" href="#." id="'+response.contserv[i].title+'" data-option-value="'+response.contserv[i].id+'"><li class="btn clear btn-serv" style="margin-bottom:1em;">'+response.contserv[i].nombre.replace('_',' ')+'</li></a>')
+                        }
 						 $('.contLoading').animate({
 	                        'opacity':0
 	                        },
@@ -228,22 +258,10 @@ jQuery(document).ready(function($) {
 	                            $(this).css({'display':'none'});
 	                            $('.loadingInBlack').remove();
 								
-		                    	$('.h_titulo').html(response.serv[0].nombre)
-		                            
-		                    	$('.text_description').remove()
-		                    	$('#text').html('<p class="text_description textoPromedio">'+response.serv[0].servicios_desc+'</p>')
-		                                  
-		                        $('.img1').attr('src','../images/pc/'+response.serv[0].image+'.png');
-		                        $('.ini').attr('href', 'http://localhost/tg5/public/servicios/'+id);
-		                        $('.btn-serv').remove();
-		                        for(var i = 0; i< response.contserv.length;i++)
-		                        {
-			                        	$('.ulContact').append('<a class="serv_mini" href="#." id="'+response.contserv[i].title+'" data-option-value="'+response.contserv[i].id+'"><li class="btn clear btn-serv" style="margin-bottom:1em;">'+response.contserv[i].nombre.replace('_',' ')+'</li></a>')
-		                        }
 		                        $('.serv_mini').click(function(event) {
 									servClick($(this))
 								});
-
+		                        $('#pagina_aparte').animate({'height':500},500,function(){ $(this).addClass('in').css({'min-height':500,'height':'auto'})});
 	                        });
 					}
 					
