@@ -1,7 +1,7 @@
 jQuery(document).ready(function($) {
 	if ($(window).width() < 991) {
 		$('#pagina_aparte').appendTo('#'+$('#pagina_aparte').data('target-pos'))
-		$('body').css('padding-top', '70px');
+		$('body').css('padding-top', $('.cd-secondary-nav').css('height'));
 		$('.logo').css('display', 'none');
 		$('#cd-intro').addClass('collapse');
 	}else
@@ -18,7 +18,7 @@ jQuery(document).ready(function($) {
 	$(window).resize(function(event) {
 		if ($(window).width() < 991) {
 			$('#pagina_aparte').appendTo('#'+$('#pagina_aparte').data('target-pos'))
-			$('body').css('padding-top', '70px');
+			$('body').css('padding-top', $('.cd-secondary-nav').css('height'));
 		}else
 		{
 			if (!$('body').hasClass('bodyservice')) {

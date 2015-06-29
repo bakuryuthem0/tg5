@@ -589,10 +589,19 @@ nav > ul > li > a > h5
 	left: 0 !important;
 
 }
+.modal
+{
+	max-height: 100%;
+	width: 100%;
+}
 @media(max-width: 991px){
+	.cd-secondary-nav
+	{
+		height: auto !important;
+	}
 	h3
 	{
-		font-size: 3em;
+		font-size: 2em;
 	}
 	h4
 	{
@@ -860,10 +869,7 @@ nav > ul > li > a > h5
 	{
 		padding: 0px;
 	}
-	.collapse-navigation
-	{
-		height: 20% !important;
-	}
+	
 	.letra
 	{
 		font-size: 1em !important;
@@ -966,6 +972,7 @@ nav > ul > li > a > h5
 {
 	margin-right: 0px !important;
 	margin-left: 0px !important;
+	max-width: 100%;
 }
 .send
 {
@@ -1287,6 +1294,10 @@ nav > ul > li > a > h5
     opacity: 0;
     position: fixed;
     left: -20%;
+    -webkit-transition: left 0.3s, opacity 0.3s;
+       -moz-transition: left 0.3s, opacity 0.3s;
+        -ms-transition: left 0.3s, opacity 0.3s;
+         -o-transition: left 0.3s, opacity 0.3s;
     transition: left 0.3s, opacity 0.3s;
   }
   #cd-logo.is-hidden.slide-in {

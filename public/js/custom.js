@@ -2,12 +2,12 @@
 jQuery(document).ready(function($) {
 	if($(window).width()>991)
 	{
-		$("html").niceScroll();
+		$("html").niceScroll({horizrailenabled:false});
 	}
 	$(window).resize(function(event) {
 		if($(window).width()>991)
 		{
-			$("html").niceScroll();
+			$("html").niceScroll({horizrailenabled:false});
 		}
 	});
 	$('.newsPics').click(function(event) {
@@ -23,15 +23,20 @@ jQuery(document).ready(function($) {
 $(document).ready(function() {
 	function cambiarNav() {
 		var offset = $('.cd-secondary-nav').offset();
-		if (offset.top <= $(window).scrollTop()) {
-			$('.cd-secondary-nav').addClass('nav-active');
-			$('.logo').addClass('logo-active');
-			$('.subtitulo').addClass('subtitulo-active');
-		}
-		if($('#about').offset().top >= $(window).scrollTop()){
-			$('.nav-active').removeClass('nav-active');
-			$('.logo-active').removeClass('logo-active');
-			$('.subtitulo-active').removeClass('subtitulo-active');
+		if ($('.cd-secondary-nav').hasClass('nav-active')) {
+			if($('#about').offset().top >= $(window).scrollTop()){
+				$('.nav-active').removeClass('nav-active');
+				$('.logo-active').removeClass('logo-active');
+				$('.subtitulo-active').removeClass('subtitulo-active');
+			}
+		}else
+		{
+			if (offset.top <= $(window).scrollTop()) {
+				$('.cd-secondary-nav').addClass('nav-active');
+				$('.logo').addClass('logo-active');
+				$('.subtitulo').addClass('subtitulo-active');
+			}
+			
 		}
 	}	
 	cambiarNav();
@@ -163,7 +168,7 @@ jQuery(document).ready(function($) {
 });
 jQuery(document).ready(function($) {
 	if ($(window).width() < 991) {
-			$('body').css('padding-top', '70px');
+			$('body').css('padding-top', $('.cd-secondary-nav').css('height'));
 			$('.logo').css('display', 'none');
 			$('#cd-intro').addClass('collapse');
 			$('#about').addClass('collapse');
@@ -182,7 +187,7 @@ jQuery(document).ready(function($) {
 	}
 	$(window).resize(function(event) {
 		if ($(window).width() < 991) {
-			$('body').css('padding-top', '70px');
+			$('body').css('padding-top', $('.cd-secondary-nav').css('height'));
 			$('.logo').css('display', 'none');
 			$('#cd-intro').addClass('collapse');
 			$('#about').addClass('collapse');
