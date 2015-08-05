@@ -21,20 +21,15 @@ class ContactController extends BaseController {
 			$inp = Input::all();
 			$rules1 = array(
 				'name' => 'required',
-				'email'=> 'required',
+				'email'=> 'required|email',
+				'proy'=> 'required',
+				'pais'=> 'required',
 				'subject'=> 'required',
 				'messagex'=> 'required'
 			);
 			$val1 = Validator::make($inp, $rules1);
 			if ($val1->fails()) {
-				return Response::json(array('cod' => 0));
-			}
-			$rules2= array(
-				'email' => 'email',
-			);
-			$val2 = Validator::make($inp, $rules2);
-			if ($val2->fails()) {
-				return Response::json(array('cod' => 1));	
+				return Response::json()->withError;
 			}
 			$subject = "Correo de contacto";
 			$to_Email = 'tecnographicvenezuela@gmail.com';

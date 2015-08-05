@@ -17,15 +17,13 @@ class ServiceController extends BaseController {
 		$contact = explode('"', link_to('../#contact'));
 		$href = array($home[1] ,$project[1],$about[1],$news[1],$contact[1]);
 		$aux = "holahola";
-		$self = Request::server('REQUEST_URI');
-		return View::make('servicios')
+		return View::make('home.servicios')
 		->with('servicios',$servicio)
 		->with('serv',$serv[0])
 		->with('title',$title)
 		->with('href',$href)
 		->with('servicio','servicio_'.$id)
 		->with('meta',$meta)
-		->with('refer',$self)
 		->with('id',$id)
 		->with('all',$all)
 		->with('aux',$aux);
@@ -34,9 +32,9 @@ class ServiceController extends BaseController {
 	{
 		if (Request::ajax()) {
 			$id = Input::get('id');
-			$serv = Servicios::where('id','=',$id)->get();
+			$serv = Servicios::find($id);
 			$servicio = ContServ::where('id_serv','=',$id)->get();
-			return Response::json(array('serv' => $serv,'contserv' => $servicio));
+			return Response::json(array('serv' => $serv->toArray(),'contserv' => $servicio->toArray()));
 		}
 	}
 	public function postService()

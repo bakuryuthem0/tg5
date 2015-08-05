@@ -84,9 +84,15 @@ fieldset[disabled] .btn-success.active {
       	<legend>Correo de contacto</legend>
          <ul>
             <li>Este mensaje le fue enviado por medio del modulo de contacto de <strong>tecnographic.com.ve</strong>.</li>
+            <li>Datos</li>
+            <li>Email: {{ $email }}</li>
+            <li>Pais: {{ $pais }}</li>
+            <li>Proyecto: {{ $proy }}</li>
+
          </ul>
 	     <p class="bg-primary" style="padding:1em;">{{ $name }} ha contactado con el asunto: {{ $subject }}</p>
-         
+         <legend>Mensaje</legend>
+         <br>
          <p>{{ $messagex }}</p>
          <p class="bg-primary" style="padding:1em;">Enviado el: {{ $fecha }}</p>
          </div>

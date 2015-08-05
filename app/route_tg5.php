@@ -12,11 +12,10 @@
 */
 
 Route::get('/', 'HomeController@getIndex');
-Route::get('servicios/{id}','ServiceController@getService');
-
-Route::post('servicios/movil','ServiceController@postMobilService');
-Route::post('buscar','ServiceController@postService');
 Route::post('enviar-correo','ContactController@postContact');
+Route::post('servicios/movil','ServiceController@postMobilService');
+Route::get('servicios/{id}','ServiceController@getService');
+Route::post('buscar','ServiceController@postService');
 
 
 	Route::get('administrador','AdminController@getLogin');

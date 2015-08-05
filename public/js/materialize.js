@@ -804,6 +804,7 @@ else {
       var originalHeight = 0;
       origin.wrap(placeholder);
 
+
       origin.on('click', function(){
         var placeholder = origin.parent('.material-placeholder');
         var windowWidth = window.innerWidth;
@@ -933,13 +934,18 @@ else {
     }); // End origin on click
 
 
-      
+      // Return on scroll
+      $(window).scroll(function() {
+        if (overlayActive ) {
+          returnToOriginal();
+        }
+      });
+
       // Return on ESC
       $(document).keyup(function(e) {
 
         if (e.keyCode === 27 && doneAnimating === true) {   // ESC key
           if (overlayActive) {
-          	$('.img-materialized').removeClass('img-materialized');
             returnToOriginal();
           }
         }

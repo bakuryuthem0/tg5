@@ -13,22 +13,12 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<meta name="author" content="Tecnographic Venezuela">
 		<link rel="icon" type="image/png" href="{{URL::to('images/favicon-01.png')}}" />
+		<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
 		{{ HTML::style('css/bootstrap.min.css') }}
-		{{ HTML::style('css/bootstrap-theme.min.css')}}
-		{{ HTML::style('css/materialize.css') }}
-		{{ HTML::style('http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css') }}
-		{{ HTML::style('css/slicknav.css') }}
-		{{ HTML::style('http://fonts.googleapis.com/css?family=Roboto:400,700,300') }}
-		{{ HTML::style('js/slick-master/slick/slick.css') }}
-		{{ HTML::style('js/slick-master/slick/slick-theme.css') }}
+		{{ HTML::style('css/bootstrap-theme.css') }}
+		{{ HTML::style('css/materialize.min.css') }}
 		{{ HTML::style('css/custom.css') }}
-		{{ HTML::style('css/reset.css') }}
-		{{ HTML::style('css/style.css') }}
-		 <!-- Bootstrap Core CSS -->
-
-	    <!-- Custom CSS -->
-	    {{ HTML::style("css/scrolling-nav.css") }}
-
 	    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
 	    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
 	    <!--[if lt IE 9]>
@@ -43,62 +33,100 @@
 		ga('create', 'UA-57229555-1', 'auto');
 		ga('send', 'pageview');
 		</script>
-		<!--Start of Zopim Live Chat Script-->
-		<script type="text/javascript">
-		window.$zopim||(function(d,s){var z=$zopim=function(c){z._.push(c)},$=z.s=
-		d.createElement(s),e=d.getElementsByTagName(s)[0];z.set=function(o){z.set.
-		_.push(o)};z._=[];z.set._=[];$.async=!0;$.setAttribute('charset','utf-8');
-		$.src='//v2.zopim.com/?2dAD65m63ms3iRvakHIbz8R4RU5hDlE4';z.t=+new Date;$.
-		type='text/javascript';e.parentNode.insertBefore($,e)})(document,'script');
-		</script>
-		<!--End of Zopim Live Chat Script-->
+
 	</head>
 	<body>
-		
-		<div id="home" class="slider">
+		<div class="slider home">
 			@foreach ($slidesSup as $image)
 				<div> <img src="images/slides-top/{{$image->image}}"> </div>
 			@endforeach
 		</div>
-		 
-		<div class="cd-secondary-nav">
-			<h2 class="tgvnzlaTitulo">Tecnographic Venezuela</h2>
-			<a href="#0" class="cd-secondary-nav-trigger">Menu<span></span></a> <!-- button visible on small devices -->
-			<nav>
-				<ul>
-					<li class="contLogo"><a href="{{ $href[0] }}" class="waves-effect waves-light btn btn-nopadding page-scroll"><img src="{{ asset('images/logo.png') }}" class="logo"></a></li>
-					<li class="active"><a href="{{ $href[0] }}" data-target-value="{{ $href[0] }}" class="waves-effect waves-light btn page-scroll"><h4><strong>INICIO</strong></h4><h5 class="subtitulo"><i>todo comienza aqui</i></h5></a></li>
-					<li><a href="{{ $href[2] }}" data-target-value="{{ $href[2] }}" class="waves-effect waves-light btn page-scroll"><h4><strong>QUIENES SOMOS</strong></h4><h5 class="subtitulo"><i>nuestro equipo</i></h5></a></li>
-					<li><a href="{{ $href[1] }}" data-target-value="{{ $href[1] }}" class="waves-effect waves-light btn page-scroll"><h4><strong>SERVICIOS</strong></h4><h5 class="subtitulo"><i>que hacemos</i></h5></a></li>
-					<li><a href="{{ $href[3] }}" data-target-value="{{ $href[3] }}" class="waves-effect waves-light btn page-scroll"><h4><strong>PORTAFOLIO</strong></h4><h5 class="subtitulo"><i>nuestros clientes</i></h5></a></li>
-					<li><a href="{{ $href[4] }}" data-target-value="{{ $href[4] }}" class="waves-effect waves-light btn page-scroll"><h4><strong>CONTACTO</strong></h4><h5 class="subtitulo"><i>solicte presupuesto</i></h5></a></li>
-					<!-- other items here -->
+		<nav>
+			<div class="nav-wrapper subMenu">
+				<a href="{{ URL::to($href[0]) }}" class="brand-logo"><img src="{{ asset('images/logo.png') }}" class="logo"></a>
+				<ul id="nav-mobile" class="right hide-on-med-and-down">
+					<li class="waves-effect waves-light">
+						<a href="#home" class="subMenuBtn"><h4>Inicio</h4><h6 class="subtitulo">Todo comienza aqui</h6></a>
+					</li>
+					<li class="waves-effect waves-light">
+						<a href="#about" class="subMenuBtn"><h4>Quienes Somos</h4><h6 class="subtitulo">Nuestro equipo</h6></a>
+					</li>
+					<li class="waves-effect waves-light">
+						<a href="#project" class="subMenuBtn"><h4>Servicios</h4><h6 class="subtitulo">Lo que hacemos</h6></a>
+					</li>
+					<li class="waves-effect waves-light">
+						<a href="#news" class="subMenuBtn"><h4>Portafolio</h4><h6 class="subtitulo">Nuestros clientes</h6></a>
+					</li>
+					<li class="waves-effect waves-light">
+						<a href="#contact" class="subMenuBtn"><h4>Contactenos</h4><h6 class="subtitulo">Contactenos</h6></a>
+					</li>
 				</ul>
-			</nav>
-		</div> <!-- .cd-secondary-nav -->
-		
+			</div>
+		</nav>
+		<div class="nav-movil">
+			<h1><span class="tech">Tecnographic </span><span class="venezuela">Venezuela</span></h1>
+		</div>
 		@yield('content')
-		<div class="row">
-			<footer class="col-xs-12 footer">
-		    	<div class="col-xs-6 cien">
-		    		<p class="textoBlanco textoPromedio">Rif: J-40488576-5</p>
-		    	</div>
-		    	<div class="col-xs-6 cien">
-		    		<p class="textoBlanco textoPromedio">Copyright <i class="fa fa-copyright"></i> 2014. Tecnographic Venezuela. Todos los derechos reservados</p>
-		    	</div>
+		<div class="row footerContenedor">
+			<footer>
+				<div class="col s12 m6 l6">
+					<p class="textoPromedio">Rif: J-40488576-5</p>
+				</div>
+				<div class="col s12 m6 l6">
+					<p class="textoPromedio">Copyright <i class="fa fa-copyright"></i> 2014. Tecnographic Venezuela. Todos los derechos reservados</p>
+				</div>
 			</footer>
 		</div>
+        
 	</body>
-	{{ HTML::script('js/jquery.min.js')}}
-	{{ HTML::script('js/scroll/jquery.nicescroll.min.js') }}
-	{{ HTML::script('js/slick-master/slick/slick.min.js') }}
-	{{ HTML::script('js/bootstrap.min.js') }}
-	{{ HTML::script('js/materialize.min.js') }}
-	{{ HTML::script("js/jquery.easing.min.js") }}
-	{{ HTML::script('js/scrolling-nav.js') }}
-	{{ HTML::script('js/custom.js') }}	
- 
+
+ 	{{ HTML::script('js/jquery.min.js') }}
+ 	{{ HTML::script('js/jquery.smint.js') }}
+ 	{{ HTML::script('js/jquery.nicescroll.js') }}
+ 	{{ HTML::script('js/bootstrap.min.js') }}
+ 	{{ HTML::script('js/materialize.min.js') }}
+ 	{{ HTML::script('js/slick/slick.min.js') }}
+ 	{{ HTML::style('js/slick/slick.css') }}
+ 	{{ HTML::style('js/slick/slick-theme.css') }}
+
+
+ 	<!-- Add mousewheel plugin (this is optional) -->
+ 	{{ HTML::script('js/fancybox/lib/jquery.mousewheel.js') }}
+
+	<!-- Add fancyBox -->
+	{{ HTML::style('js/fancybox/source/jquery.fancybox.css?v=2.1.5',array('media' => 'screen')) }}
+	{{ HTML::script('js/fancybox/source/jquery.fancybox.pack.js?v=2.1.5') }}
+
+	<!-- Optionally add helpers - button, thumbnail and/or media -->
+	{{ HTML::style('js/fancybox/source/helpers/jquery.fancybox-buttons.css?v=1.0.5',array('media' => 'screen')) }}
+	
+	{{ HTML::script('js/fancybox/source/helpers/jquery.fancybox-buttons.js?v=1.0.5') }}
+	{{ HTML::script('js/fancybox/source/helpers/jquery.fancybox-media.js?v=1.0.6') }}
+	{{ HTML::script('js/fancybox/source/helpers/jquery.fancybox-thumbs.js?v=1.0.7') }}
+	{{ HTML::style('js/fancybox/source/helpers/jquery.fancybox-thumbs.css?v=1.0.7',array('media' => 'screen')) }}
+	
+
+
+ 	{{ HTML::script('js/custom.js') }}
+
     @yield('postscript')
-  
+  	<script type="text/javascript">
+  		$("html").niceScroll();
+  		$('.home').slick(
+		{
+			arrows:true,	
+		});
+		$('.subMenu').smint({
+			'scrollSpeed' : 1000
+		});
+		$(".fancybox").fancybox({
+			afterClose:function() {
+				$('.fancybox').css({
+					'display': 'block'
+				});
+			}
+		});
+		
+  	</script>
 	
 </html>

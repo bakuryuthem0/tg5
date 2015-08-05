@@ -19,11 +19,11 @@ class HomeController extends BaseController {
 	{
 		$title = 'Tecnographic Venezuela | diseño y desarrollo de paginas web,imagen corporativa y sistemas administrativos';
 		$meta = "Somos una empresa de diseño y desarrollo de paginas web en la ciudad de maracay";
-		$href = array('#home' ,'#project','#about','#news','#contact');
+		$href = array('#home','#about' ,'#project','#news','#contact');
 		$servicios = Servicios::get();
-		$slidesSup = Slides::where('tipo','=',1)->where('active','=',1)->where('deleted','=',0)->get();
-		$slidesInf = Slides::where('tipo','=',2)->where('active','=',1)->where('deleted','=',0)->get();
-		return View::make('index')->with('title',$title)->with('href',$href)->with('meta',$meta)
+		$slidesSup = Slides::where('tipo','=',1)->where('activo','=',1)->where('deleted','=',0)->get();
+		$slidesInf = Slides::where('tipo','=',2)->where('activo','=',1)->where('deleted','=',0)->get();
+		return View::make('home.index')->with('title',$title)->with('href',$href)->with('meta',$meta)
 							      ->with('servicios',$servicios)->with('slidesSup',$slidesSup)->with('slidesInf',$slidesInf);
 	}
 
